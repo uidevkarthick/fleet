@@ -187,7 +187,7 @@
   // width: 100%;
   // padding: 20px 20px;
   background: @body-color;
-  border-radius: 0 10px 10px 0;
+  border-radius: 10px 10px 10px 10px;
   overflow: hidden;
 }
 .tbl-left-sec {
@@ -626,4 +626,50 @@ form .form-control:placeholder {
 }
 .tag-icn-status {
   float: left;
+}
+.tbl-slct-scnd {
+  height: 32px !important;
+  float: left !important;
+
+  border-radius: 10px !important;
+
+  button {
+    height: 100%;
+    border-radius: 10px !important;
+  }
+}
+
+.scnd-action {
+  margin-right: 20px;
+}
+.veh-tag {
+  float: right;
+  position: relative;
+  &:after {
+    content: "";
+    background: url("../images/veh-tag.svg") center no-repeat;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    position: absolute;
+    right: 10%;
+  }
+}
+
+.veh-tag-drop {
+  position: relative;
+
+  li {
+    a {
+      position: relative;
+
+      .tag-clr {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #c01;
+      }
+    }
+  }
 }

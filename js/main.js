@@ -39,10 +39,18 @@ $(document)
 $(document).ready(function () {
   $(".bootstrap-select button").css("outline", "none !important");
 
+  // upload sec
   $(".file-upload").each(function (e) {
     $(this).change(function () {
       filename = this.files[0].name;
       $(this).parent().find(".file-up").text(filename);
     });
   });
+
+  // active nav
+  if ($(".nav-item").hasClass("active")) {
+    $("active").find("add-detail-btn").show();
+  } else {
+    $("active").find("add-detail-btn").hide();
+  }
 });
