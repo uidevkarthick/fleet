@@ -54,10 +54,11 @@
                                 <a href="add-customer.html" class="add-detail-btn"></a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="vehicle.html">
                                     <img src="images/icons/veh-icon.svg" alt="" /><img
                                         src="images/icons/veh-icon-blue.svg" class="secn-img" alt="" /><span
                                         class="nav-txt">Vechicle Registration</span></a>
+                                <a href="add-vehicle.html" class="add-detail-btn"></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
@@ -112,48 +113,7 @@
             <div class="profile-sec">
                 <!-- <div class="toggle-nav"></div> -->
                 <!-- main sort for agent and list -->
-                <section class="srch-pick w-full">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="corp-select">
-                                <div class="agent-drop">
-                                    <label>Agent</label>
-                                    <select class="selectpicker" data-live-search="true">
-                                        <option>Select Corporate</option>
-                                        <option>Yapsite</option>
-                                        <option>Axis bank</option>
-                                        <option>HDFC Bank</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="corp-select">
-                                <div class="agent-drop">
-                                    <label>List</label>
-                                    <select class="selectpicker" data-live-search="true">
-                                        <option>Select Customer</option>
-                                        <option>Yapsite</option>
-                                        <option>Axis bank</option>
-                                        <option>HDFC Bank</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="profile-dept">
 
-                    <span class="profile-img">
-                        <img src="images/user.jpg" class="img-fluid" alt="user" />
-                    </span>
-                    <p class="profile-username">karthick, baasha</p>
-                    <div class="profile-drop">
-                        <ul>
-                            <li><a href="">Profile</a></li>
-                            <li><a href="">Change Password</a></li>
-                        </ul>
-                        <span class="logout">Logout</span>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -162,7 +122,7 @@
             <section class="w-full title-sec">
                 <div class="row">
                     <div class="col-xl-6">
-                        <h1>New Customer Registration</h1>
+                        <h1>New Vehicle Registration</h1>
                     </div>
                     <div class="col-xl-6">
                         <div class="tlt-btn-sec">
@@ -181,7 +141,7 @@
 
                         <div class="col-xl-6">
                             <div class="tlt-cus-drop">
-                                <p class="frm-tlt">Customer Details</p>
+                                <p class="frm-tlt">Vehicle Details</p>
                             </div>
                         </div>
                         <div class="col-xl-6 d-flex justify-content-end align-items-center">
@@ -284,14 +244,16 @@
                                         </div>
                                         <div class="form-group col-xl-4 col-xs-12 col-sm-4">
                                             <label for="exampleInputPassword1" class="veh-tag">Tag Class</label>
-                                            <select class="selectpicker frm-slct custom-dropdown veh-tag-drop"
-                                                title="Select Tag Class">
-                                                <option data-tokens="">Lorry - VC12 <label class="tag-clr">asda</label>
-                                                </option>
-                                                <option data-tokens="">Auto - VC6</option>
-                                                <option data-tokens="">Lorry - VC12</option>
-                                                <option data-tokens="">Auto - VC6</option>
-                                            </select>
+                                            <div class="wrap-drop" id="noble-gases">
+                                                <span>Select Tag class</span>
+                                                <ul class="drop">
+                                                    <li><a>Lorry - VC12 <span></span></a></li>
+                                                    <li><a>Auto - VC6 <span></span></a></li>
+                                                    <li><a>Lorry - VC12 <span></span></a></li>
+                                                    <li><a>Auto - VC6 <span></span></a></li>
+                                                    <li><a>Auto - VC6 <span></span></a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                         <div class="form-group col-xl-4 col-xs-12 col-sm-4">
                                             <label for="exampleInputPassw ord1">Mapper Class</label>

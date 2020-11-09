@@ -8,6 +8,7 @@
 @success-color: #31b560;
 @txt-color: #151515;
 @txt-normal-color: rgba(21, 21, 21, 0.7);
+@txt-label-color: #969696;
 @table-td-color: #767676;
 @heading-color: #2f62af;
 @table-head-color: #e3ebff;
@@ -103,9 +104,10 @@ h1 {
   width: 100%;
   float: left;
 }
+
 .navpanel {
   float: left;
-  width: 250px;
+  width: 285px;
   height: 100%;
   background-color: @theme-color;
   position: fixed;
@@ -361,7 +363,7 @@ h1 {
 }
 .contenet-sec {
   float: right;
-  width: calc(100% - 250px);
+  width: calc(100% - 285px);
   padding: 30px;
   transition: 0.2s all ease;
   position: relative;
@@ -448,13 +450,14 @@ ul.navbar-nav {
   .thead-dark {
     th {
       font-style: normal;
-
       color: @heading-color;
-      background-color: transparent;
+      background-color: @content_bg_color;
       border-color: @table-border-color;
       position: sticky;
       top: -1px;
       border-bottom-width: 1px;
+      z-index: 1;
+      border-top: 0;
     }
   }
   tr {
@@ -481,4 +484,8 @@ ul.navbar-nav {
   width: 38px;
   height: 38px;
   background: url("../images/burger.svg") no-repeat center;
+}
+
+.form-control {
+  border-radius: 6px !important;
 }
