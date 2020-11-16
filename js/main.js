@@ -1,10 +1,11 @@
 // load content profile
 $(document).ready(function () {
-  $(".profile-sec").load("../header.html");
+  // $(".profile-sec").load("../header.html");
+
 
   //profile pic dropdown
-  $(".profile-dept").click(function () {
-    $(".profile-drop").toggle();
+  $(".profile-username").click(function () {
+    $(".profile-dlt-sec").toggle();
   });
   // sidenav - dropdown
   $(document).on("click", "#nav-drop-items", function () {
@@ -47,11 +48,72 @@ $(document).ready(function () {
   });
   // outside click to hide kabeb list
   $(document).mouseup(function (e) {
-    var container = $(".kabeb-list");
+    var container = $(".kabeb-list, .profile-dlt-sec ");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       container.hide();
     }
   });
+
+  // for popup
+  $(".blk-tag").click(function () {
+    $(".overlay").show();
+    $(".pop-cont").hide();
+    $(".popup-block").show();
+  });
+  $(".rep-tag").click(function () {
+    $(".overlay").show();
+    $(".pop-cont").hide();
+    $(".popup-replace").show();
+  });
+  $(".mapr-tag").click(function () {
+    $(".overlay").show();
+    $(".pop-cont").hide();
+    $(".popup-mapper").show();
+  })
+  // popup-cancel
+  $(".cncl-butn-pop").click(function () {
+    $(this).parents(".pop-cont").hide()
+    $(".overlay").hide();
+  })
+  // vehicle mapper popup
+  $(".veh-tag").click(function () {
+    $(".overlay").show();
+    $(".pop-cont").hide();
+    $(".popup-map-veh").show()
+  })
+  // change password
+  $(".change-password").click(function () {
+    $(".overlay").show();
+    $(".pop-cont").hide();
+    $(".popup-change-password").show();
+  });
+  // cancel password
+  $(".cncl-password").click(function () {
+    $(".change-password-show").hide();
+    $(".change-password").show();
+
+  });
+  // custom date seclection
+  $(document).on("click", ".calc", function () {
+    $(".overlay").show();
+    $(".pop-cont").hide();
+    $(".popup-custom-date").show();
+  })
+  // fetch-data - delete after complete UI
+  $(".fetch-date").click(function () {
+    $(".custom-date-show").show();
+    $(".overlay").hide();
+    $(".pop-cont").hide();
+    $(".popup-custom-date").hide();
+  });
+  // edit custom date
+  $(".custom-date-edit").click(function () {
+    $(".overlay").show();
+    $(".pop-cont").hide();
+    $(".popup-custom-date").show();
+  });
+
+
 });
 
 $(document).ready(function () {
@@ -134,3 +196,4 @@ $(".nav-item").on("hover", function () {
 $(".tlt-bck").click(function () {
   window.history.back();
 });
+

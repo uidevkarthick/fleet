@@ -20,6 +20,7 @@
 @drop-down-color: #eef7ff;
 @placeholder-color: rgba(0, 0, 0, 0.5);
 @upload-bg: #f4faff;
+@overlay: rgba(21, 21, 21, 0.7);
 
 // font
 
@@ -62,6 +63,18 @@ th {
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
+}
+.mr-0 {
+  margin-right: 0;
+}
+.mt-0 {
+  margin-top: 0;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.mb-40 {
+  margin-bottom: 40px;
 }
 
 body {
@@ -307,6 +320,47 @@ h1 {
     }
   }
 }
+
+.edit-btn {
+  width: 20px;
+  height: 20px;
+
+  color: @theme-color;
+  border-radius: 4px;
+  float: left;
+  text-align: center;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    background: url("../images/edit.svg") center no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+
+  // &:hover {
+  //   color: @white-color;
+  //   background-color: @theme-color;
+
+  //   &:before {
+  //     content: "";
+  //     background: url("../images/right_arrow.svg") center no-repeat;
+  //     display: inline-block;
+  //     width: 10px;
+  //     height: 7px;
+  //     filter: invert(1);
+  //   }
+  // }
+}
+
 .success-butn {
   background-color: @success-color;
   color: @white-color;
@@ -447,6 +501,7 @@ ul.navbar-nav {
 
 .table {
   margin-bottom: 0;
+  white-space: nowrap;
   .thead-dark {
     th {
       font-style: normal;
@@ -488,4 +543,253 @@ ul.navbar-nav {
 
 .form-control {
   border-radius: 6px !important;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: @overlay;
+  z-index: 3;
+  display: none;
+
+  .pop-cont {
+    display: none;
+  }
+
+  .popup {
+    float: left;
+    width: 400px;
+    background: #fff;
+    border-radius: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    margin: auto;
+    transform: translate(-50%, -50%);
+
+    th {
+      font-family: @font-ibm;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      color: @heading-color;
+      padding-top: 5px;
+      height: 20px;
+    }
+    td {
+      font-family: @font-ilisar_regular;
+      color: @table-td-color;
+      padding-top: 5px;
+      height: 20px;
+    }
+    tr {
+      background: transparent !important;
+    }
+  }
+
+  .pop-title {
+    float: left;
+    width: 100%;
+    background: #f9fbff;
+    padding: 15px 20px;
+    font-family: @font-ilisar_regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #271f56;
+    border-bottom: 1px solid @table-border-color;
+    border-radius: 16px 16px 0 0;
+  }
+  .pop-conten {
+    float: left;
+    width: 100%;
+    padding: 10px 0 0 0;
+  }
+  .pop-confirm {
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 20px;
+
+    .submit-butn-pop {
+      background: @theme-color;
+      width: 100px;
+      height: 36px;
+      color: @white-color;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      outline: none !important;
+    }
+    .cncl-butn-pop {
+      background: transparent;
+      width: 100px;
+      height: 36px;
+      border: none;
+      color: @theme-color;
+      font-size: 13px;
+      outline: none !important;
+    }
+  }
+
+  .map-veh-popup {
+    width: 501px;
+
+    .popup-map-veh {
+      display: none;
+    }
+
+    .pop-title {
+      display: flex;
+      justify-content: space-between;
+      .vehl-mapper {
+        height: auto;
+      }
+    }
+
+    .pop-conten {
+      padding: 0;
+    }
+    .pop-confirm {
+      padding: 0 0 10px 0;
+    }
+    .pop-cont {
+      width: 100%;
+    }
+
+    .owl-dots {
+      counter-reset: slides-num;
+      right: 48%;
+      position: absolute;
+      bottom: 2%;
+      width: 20px;
+
+      color: #271f56;
+      &:after {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 700;
+        padding-left: 5px;
+        vertical-align: middle;
+      }
+    }
+    .owl-dot {
+      counter-increment: slides-num;
+      display: inline-block;
+      margin-right: 5px;
+      span {
+        display: none !important;
+      }
+    }
+    .owl-dot.active {
+      &:before {
+        content: counter(slides-num);
+        display: inline-block;
+        font-size: 20px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        vertical-align: middle;
+        font-family: @font-ilisar_regular;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        background: #edf4ff;
+        border: 0.3px solid #dceaff;
+        box-sizing: border-box;
+        border-radius: 2px;
+        width: 20.51px;
+        height: 20.51px;
+        padding-top: 2px;
+      }
+    }
+
+    .owl-nav {
+      bottom: -8%;
+      right: 50%;
+      button {
+        outline: none !important;
+        background: transparent !important;
+      }
+
+      .owl-next {
+        position: relative;
+        right: -20px;
+        span {
+          background: none !important;
+          display: none;
+        }
+        &:before {
+          content: "";
+          background: url("../images/arrow-slide.svg") center no-repeat;
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+        }
+      }
+      .owl-prev {
+        position: relative;
+        left: -20px;
+        span {
+          background: none !important;
+          display: none;
+        }
+        &:before {
+          content: "";
+          background: url("../images/arrow-slide.svg") center no-repeat;
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+
+.popup-replace,
+.popup-mapper {
+  float: left;
+  width: 100%;
+  .pop-conten {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    padding-bottom: 0;
+    width: 100%;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 12px;
+      }
+
+      input {
+        height: 32px;
+        border-radius: 6px;
+        font-size: 12px;
+        border-color: @table-border-color;
+      }
+
+      .bootstrap-select {
+        width: 100%;
+        height: 32px;
+        button {
+          height: 32px;
+          border-radius: 6px;
+          border-color: @table-border-color;
+        }
+      }
+    }
+  }
 }

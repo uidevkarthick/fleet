@@ -19,8 +19,6 @@
     <!-- font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
         rel="stylesheet" />
-
-
 </head>
 
 <body>
@@ -45,7 +43,7 @@
                                         class="nav-txt">Dashboard</span>
                                     <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="index.html">
                                     <img src="images/icons/cus-icon.svg" alt="" /><img
                                         src="images/icons/cus-icon-blue.svg" class="secn-img" alt="" /><span
@@ -54,10 +52,11 @@
                                 <a href="add-customer.html" class="add-detail-btn"></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="vehicle.html">
                                     <img src="images/icons/veh-icon.svg" alt="" /><img
                                         src="images/icons/veh-icon-blue.svg" class="secn-img" alt="" /><span
                                         class="nav-txt">Vechicle Registration</span></a>
+                                <a href="add-vehicle.html" class="add-detail-btn"></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
@@ -66,7 +65,7 @@
                                         class="nav-txt">Reports</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="transaction-history.html">
+                                <a class="nav-link" href="#">
                                     <img src="images/icons/trans-icon.svg" alt="" /><img
                                         src="images/icons/trans-icon-blue.svg" class="secn-img" alt="" /><span
                                         class="nav-txt">Transaction History</span></a>
@@ -88,15 +87,6 @@
                                 </div>
                             </li>
 
-                            <!-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#droplayers" id="navbarDropdown" role="button" data-toggle="collapse" aria-expanded="false">
-                    <img src="images/icons/fund-icon.svg" alt=""/><img src="images/icons/fund-icon-blue.svg" class="secn-img" alt=""/>Fund Transfer
-                  </a>
-                  <div class="dropdown-menu" id="droplayers" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#"><span>FD</span>Fund Corporate</a>
-                    <a class="dropdown-item" href="#"><span>LT</span>List Transactions</a>
-                  </div>
-                </li> -->
                         </ul>
                     </div>
                 </nav>
@@ -163,6 +153,7 @@
                             </ul>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -172,163 +163,174 @@
             <section class="w-full title-sec">
                 <div class="row">
                     <div class="col-xl-12">
-                        <h1 class="tlt-bck">Customer Details</h1>
+                        <h1 class="trans-tlt">Profile</h1>
                     </div>
+
                 </div>
             </section>
             <!-- content table section -->
             <section class="w-full content-table">
-                <div class="row">
-                    <div class="table-title-sec">
 
-
-                        <div class="col-xl-6">
-                            <div class="tlt-cus-drop">
-                                <p class="frm-tlt">TVS - 10099000 | School College Transport</p>
+                <div class="profile-info">
+                    <div class="row">
+                        <div class="table-title-sec">
+                            <div class="col-xl-12">
+                                <div class="tlt-cus-drop">
+                                    <p class="frm-tlt">Personal Information</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-xl-6 d-flex justify-content-end align-items-center">
-                            <!-- <div class="tbl-left-sec">
-                                <div class="tbl-slct-tag">
-                                    <select class="selectpicker tag-action custom-dropdown">
-                                        <option>Fast Tag 1</option>
-                                        <option>Fast Tag 2</option>
-                                        <option>Fast Tag 3</option>
-                                    </select>
-                                </div>
-                                <div class="tlt-search-sec">
-                                    <div class="search-bx">
-                                        <input type="text" placeholder="search customer" />
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="profile-inn">
+                                <div class="profile-name">
+                                    <div class="profile-pic">k</div>
+                                    <div class="profile-dlt">
+                                        <p class="profile-name">karthick baasha</p>
+                                        <p class="profile-email">baasha_bhai@gmail.com</p>
                                     </div>
                                 </div>
-                            </div> -->
+
+                                <div class="profile-details">
+                                    <div class="row">
+                                        <div class="col-xl-8 profile-seperation">
+                                            <div class="row">
+                                                <div class="col-xl-6 mb-40">
+                                                    <label>First Name</label>
+                                                    <p>Karthick</p>
+                                                </div>
+                                                <div class="col-xl-6 mb-40">
+                                                    <label>Last Name</label>
+                                                    <p>Baasha</p>
+                                                </div>
+                                                <div class="col-xl-6 mb-40">
+                                                    <label>Email ID</label>
+                                                    <p>baasha_bhai@gmail.com</p>
+                                                </div>
+                                                <div class="col-xl-6 mb-40">
+                                                    <label>Mobile No</label>
+                                                    <p>9698412345</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4"></div>
+                                    </div>
+                                </div>
+
+                            </div>
 
                         </div>
                     </div>
-
                 </div>
-                <!-- table starts here -->
-                <div class="row">
-                    <div class="col-xl-12">
-                        <section class="w-full reg-form view-form">
-                            <form>
-                                <div class="row">
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>Title</label>
-                                        <span>Mr.</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>Customer ID</label>
-                                        <span>10099000</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>Company/Transporter Name</label>
-                                        <span>TVS</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>Owner Name</label>
-                                        <span>Tvs</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>Incorporate Date</label>
-                                        <span>02/18/2002</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>Nature of Business</label>
-                                        <span>School College Transport</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>Contact Number</label>
-                                        <span>9466446644</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>Kit Number</label>
-                                        <span>6100270100000590</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>Email ID</label>
-                                        <span>tvs@m2p.in</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>Address 1</label>
-                                        <span>jaanvi stret</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>Address 2</label>
-                                        <span>andhra</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>City</label>
-                                        <span>andhra</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>State</label>
-                                        <span>Andhra Pradesh</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>Country</label>
-                                        <span>India</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>Zip Code</label>
-                                        <span>623368</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>CIN Number/Pan Number</label>
-                                        <span>610027</span>
-                                    </div>
-                                    <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                        <label>Threshold Limit</label>
-                                        <span>1000</span>
-                                    </div>
-
-                                    <div class="form-segment">
-                                        <div class="view-form-segment">
-                                            <h2>Customer’s KYC Documents</h2>
-                                            <span>Download All</span>
-                                        </div>
-
-
-                                        <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                            <label>Address proof</label>
-                                            <div class="proof-view">
-                                                <img src="images/proof1.jpg" alt="" />
-                                            </div>
-                                            <a href="" class="download-proof">Download</a>
-
-                                        </div>
-
-                                        <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                            <label>Identity Proof</label>
-                                            <div class="proof-view">
-                                                <img src="images/proof2.jpg" alt="" />
-                                            </div>
-                                            <a href="" class="download-proof">Download</a>
-                                        </div>
-
-                                        <div class="form-group col-xl-4 col-xs-12 col-sm-4">
-                                            <label>Other Proof</label>
-                                            <div class="proof-view">
-                                                <img src="images/proof1.jpg" alt="" />
-                                            </div>
-                                            <a href="" class="download-proof">Download</a>
-                                        </div>
-                                    </div>
+                <div class="profile-info security-info-sec">
+                    <div class="row">
+                        <div class="table-title-sec">
+                            <div class="col-xl-12">
+                                <div class="tlt-cus-drop">
+                                    <p class="frm-tlt">Security Information</p>
                                 </div>
-                            </form>
-                        </section>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="tot-sec">
-                        <div class="col-xl-12 col-sm-12 float-right d-flex justify-content-end">
-                            <button type="submit" class="cncl-butn">Cancel</button>
-                            <button type="submit" class="submit-butn">Submit</button>
+                            </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="profile-inn">
+                                <div class="profile-details mt-0">
+                                    <div class="row">
+                                        <div class="col-xl-8 profile-seperation">
+                                            <div class="row">
+                                                <div class="col-xl-6 mb-0">
+                                                    <label>Email ID</label>
+                                                    <p>baasha_bhai@gmail.com</p>
+                                                </div>
+                                                <div class="col-xl-6 mb-0">
+                                                    <span class="password-sec">
+                                                        <label>Your password</label>
+                                                        <p>..............</p>
+                                                        <span class="change-password">Change</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="row">
+                                                <div class="change-password-show">
+                                                    <div class="form-group col-xl-6 col-xs-12 col-sm-6">
+                                                        <label for="exampleInputPassword1">Enter New paswword</label>
+                                                        <input type="text" class="form-control"
+                                                            id="exampleInputPassword1" placeholder="">
+                                                    </div>
+                                                    <div class="form-group col-xl-6 col-xs-12 col-sm-6">
+                                                        <label for="exampleInputPassword1">Confirm Password</label>
+                                                        <input type="text" class="form-control"
+                                                            id="exampleInputPassword1" placeholder="">
 
+                                                        <div class="tot-sec">
+                                                            <div
+                                                                class="col-xl-12 col-sm-12 float-right d-flex justify-content-end no-pd">
+                                                                <button type="submit"
+                                                                    class="cncl-butn cncl-password">Cancel</button>
+                                                                <button type="submit" class="submit-butn">Save</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div> -->
+                                        </div>
+                                        <div class="col-xl-4"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+
+
+
             </section>
+        </div>
+    </div>
+
+    <!-- popups -->
+    <div class="overlay">
+        <div class="popup">
+            <div class="popup-change-password pop-cont">
+                <div class="pop-title">Change password</div>
+                <div class="pop-conten">
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <th>Old Password</th>
+                                <td>
+                                    <div class="form-group col-xl-12 col-xs-12 col-sm-12">
+                                        <input type="password" class="form-control" id="exampleInputPassword1"
+                                            placeholder="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>New Password</th>
+                                <td>
+                                    <div class="form-group col-xl-12 col-xs-12 col-sm-12">
+
+                                        <input type="password" class="form-control" id="exampleInputPassword1"
+                                            placeholder="">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pop-confirm">
+                    <button type="submit" class="cncl-butn-pop">Cancel</button>
+                    <button type="submit" class="submit-butn-pop">Change</button>
+                </div>
+            </div>
+
         </div>
     </div>
 
