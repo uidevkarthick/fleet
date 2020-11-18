@@ -1,8 +1,5 @@
 // load content profile
 $(document).ready(function () {
-  // $(".profile-sec").load("../header.html");
-
-
   //profile pic dropdown
   $(".profile-username").click(function () {
     $(".profile-dlt-sec").toggle();
@@ -113,6 +110,16 @@ $(document).ready(function () {
     $(".popup-custom-date").show();
   });
 
+  // empty transaction view
+  if ($(".table-transaction-history tr").length < 1) {
+    $(".table-transaction-history").hide();
+    $(".empty-trans-section").show();
+    $(".trans-tbl-cnt").hide();
+  } else {
+    $(".table-transaction-history").show();
+    $(".empty-trans-section").hide();
+    $(".trans-tbl-cnt").show();
+  }
 
 });
 
@@ -188,11 +195,7 @@ setTimeout(function () {
     }
   });
 }, 200);
-
-$(".nav-item").on("hover", function () {
-  $(this).find(".add-detail-btn").show();
-});
-
+// back to history
 $(".tlt-bck").click(function () {
   window.history.back();
 });

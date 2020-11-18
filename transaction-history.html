@@ -37,14 +37,14 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="index.html">
                                     <img src="images/icons/dash-icon.svg" alt="" /><img
                                         src="images/icons/dash-icon-blue.svg" class="secn-img" alt="" /><span
                                         class="nav-txt">Dashboard</span>
                                     <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">
+                                <a class="nav-link" href="customer.html">
                                     <img src="images/icons/cus-icon.svg" alt="" /><img
                                         src="images/icons/cus-icon-blue.svg" class="secn-img" alt="" /><span
                                         class="nav-txt">Customer</span>
@@ -117,8 +117,7 @@
                             <div class="corp-select">
                                 <div class="agent-drop">
                                     <label>Agent</label>
-                                    <select class="selectpicker" data-live-search="true">
-                                        <option>Select Corporate</option>
+                                    <select class="selectpicker" data-live-search="true" title="Select Corporate">
                                         <option>Yapsite</option>
                                         <option>Axis bank</option>
                                         <option>HDFC Bank</option>
@@ -128,8 +127,7 @@
                             <div class="corp-select">
                                 <div class="agent-drop">
                                     <label>List</label>
-                                    <select class="selectpicker" data-live-search="true">
-                                        <option>Select Customer</option>
+                                    <select class="selectpicker" data-live-search="true" title="Select Customer">
                                         <option>Yapsite</option>
                                         <option>Axis bank</option>
                                         <option>HDFC Bank</option>
@@ -173,7 +171,7 @@
                     <div class="col-xl-8 d-flex justify-content-between align-items-center">
                         <h1 class="trans-tlt">Transactions Details <span>Corporate ID - ADITYA</span></h1>
                         <div class="custom-date-show">
-                            <span>DATE RANGE</span> - 02/09/2020 to 03/10/202020
+                            <span>DATE RANGE</span> - 02/09/2020 to 03/10/2020
                             </span>
                             <span class="custom-date-edit"></span>
                         </div>
@@ -224,7 +222,6 @@
                                         <option>Today</option>
                                         <option>Last one Week</option>
                                         <option>Last one Month</option>
-                                        <option>Last one Year</option>
                                         <option data-divider="true"></option>
                                         <option data-content='<span class="calc">Custom your date</span>'>
                                             Custom your
@@ -261,7 +258,15 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <section class="table-sec w-full table-responsive table-responsive-xl">
-                            <table class="table table-hover">
+
+                            <div class="empty-trans-section">
+                                <div class="emty-trans-bx">
+                                    <img src="images/empty-trans.svg" alt="" class="img-fluid" />
+                                    <p>Select search critera and Date range to view your transaction history</p>
+                                </div>
+                            </div>
+
+                            <table class="table table-hover table-transaction-history">
                                 <thead class="thead-dark">
                                     <tr>
                                         <th scope="col">Date & Time</th>
@@ -430,7 +435,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="tot-sec cnt">
+                    <div class="tot-sec cnt trans-tbl-cnt">
                         <div class="col-xl-6">
                             <span class="tot-pg-count">Total pages (36)</span>
                         </div>

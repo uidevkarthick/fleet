@@ -2,82 +2,122 @@
 <html lang="en">
 
 <head>
-  <title>Fleet | Customer</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- bootstrap 4 -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <!-- bootstarap select libraries, please remove if yu dont want -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-  <!-- config files less / js-->
-  <link rel="stylesheet/less" type="text/css" href="less/main.less" />
-  <!-- font -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
-    rel="stylesheet" />
+    <title>Fleet | Customer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- bootstarap select libraries, please remove if yu dont want -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <!-- config files less / js-->
+    <link rel="stylesheet/less" type="text/css" href="less/main.less" />
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- chart js -->
+
+    <style>
+        #canvas-holder {
+            width: 100%;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .chartjs-tooltip {
+            opacity: 1;
+            position: absolute;
+            background: rgba(0, 0, 0, .7);
+            color: white;
+            border-radius: 3px;
+            -webkit-transition: all .1s ease;
+            transition: all .1s ease;
+            pointer-events: none;
+            -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+        }
+
+        .chartjs-tooltip-key {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 10px;
+        }
+    </style>
+
 </head>
 
 <body>
-  <div class="container-fluid no-pd">
-    <div class="navpanel">
-      <div class="logo">
-        <img src="images/logo.svg" class="img-fluid logo-act" alt="fleet" />
-        <img src="images/logo-tog.svg" class="img-fluid logo-tog" alt="fleet" />
-      </div>
-      <div class="nav-section">
-        <nav class="navbar navbar-expand-lg">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <img src="images/icons/dash-icon.svg" alt="" /><img src="images/icons/dash-icon-blue.svg"
-                    class="secn-img" alt="" /><span class="nav-txt">Dashboard</span>
-                  <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                  <img src="images/icons/cus-icon.svg" alt="" /><img src="images/icons/cus-icon-blue.svg"
-                    class="secn-img" alt="" /><span class="nav-txt">Customer</span>
-                </a>
-                <a href="add-customer.html" class="add-detail-btn"></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="vehicle.html">
-                  <img src="images/icons/veh-icon.svg" alt="" /><img src="images/icons/veh-icon-blue.svg"
-                    class="secn-img" alt="" /><span class="nav-txt">Vechicle Registration</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <img src="images/icons/reports-icon.svg" alt="" /><img src="images/icons/reports-icon-blue.svg"
-                    class="secn-img" alt="" /><span class="nav-txt">Reports</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="transaction-history.html">
-                  <img src="images/icons/trans-icon.svg" alt="" /><img src="images/icons/trans-icon-blue.svg"
-                    class="secn-img" alt="" /><span class="nav-txt">Transaction History</span></a>
-              </li>
+    <div class="container-fluid no-pd">
+        <div class="navpanel">
+            <div class="logo">
+                <img src="images/logo.svg" class="img-fluid logo-act" alt="fleet" />
+                <img src="images/logo-tog.svg" class="img-fluid logo-tog" alt="fleet" />
+            </div>
+            <div class="nav-section">
+                <nav class="navbar navbar-expand-lg">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="dashboard.html">
+                                    <img src="images/icons/dash-icon.svg" alt="" /><img
+                                        src="images/icons/dash-icon-blue.svg" class="secn-img" alt="" /><span
+                                        class="nav-txt">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="customer.html">
+                                    <img src="images/icons/cus-icon.svg" alt="" /><img
+                                        src="images/icons/cus-icon-blue.svg" class="secn-img" alt="" /><span
+                                        class="nav-txt">Customer</span>
+                                </a>
+                                <a href="add-customer.html" class="add-detail-btn"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="vehicle.html">
+                                    <img src="images/icons/veh-icon.svg" alt="" /><img
+                                        src="images/icons/veh-icon-blue.svg" class="secn-img" alt="" /><span
+                                        class="nav-txt">Vechicle Registration</span></a>
+                                <a href="add-vehicle.html" class="add-detail-btn"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="images/icons/reports-icon.svg" alt="" /><img
+                                        src="images/icons/reports-icon-blue.svg" class="secn-img" alt="" /><span
+                                        class="nav-txt">Reports</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="transaction-history.html">
+                                    <img src="images/icons/trans-icon.svg" alt="" /><img
+                                        src="images/icons/trans-icon-blue.svg" class="secn-img" alt="" /><span
+                                        class="nav-txt">Transaction History</span></a>
+                            </li>
 
-              <li class="nav-item">
-                <a class="nav-link collapsed text-truncate" id="nav-drop-items" href="#submenu1" data-toggle="collapse"
-                  data-target="#submenu1">
-                  <img src="images/icons/fund-icon.svg" alt="" /><img src="images/icons/fund-icon-blue.svg"
-                    class="secn-img" alt="" /><span class="nav-txt">Fund Transfer</span></a>
-                <div class="collapse" id="submenu1" aria-expanded="false">
-                  <a class="dropdown-item" href="#"><span>FD</span><span class="nav-txt">Fund Corporate</span></a>
-                  <a class="dropdown-item" href="#submenu1sub1"><span>LT</span><span class="nav-txt">List
-                      Transactions</span>
-                  </a>
-                </div>
-              </li>
+                            <li class="nav-item">
+                                <a class="nav-link collapsed text-truncate" id="nav-drop-items" href="#submenu1"
+                                    data-toggle="collapse" data-target="#submenu1">
+                                    <img src="images/icons/fund-icon.svg" alt="" /><img
+                                        src="images/icons/fund-icon-blue.svg" class="secn-img" alt="" /><span
+                                        class="nav-txt">Fund Transfer</span></a>
+                                <div class="collapse" id="submenu1" aria-expanded="false">
+                                    <a class="dropdown-item" href="#"><span>FD</span><span class="nav-txt">Fund
+                                            Corporate</span></a>
+                                    <a class="dropdown-item" href="#submenu1sub1"><span>LT</span><span
+                                            class="nav-txt">List
+                                            Transactions</span>
+                                    </a>
+                                </div>
+                            </li>
 
-              <!-- <li class="nav-item dropdown">
+                            <!-- <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#droplayers" id="navbarDropdown" role="button" data-toggle="collapse" aria-expanded="false">
                     <img src="images/icons/fund-icon.svg" alt=""/><img src="images/icons/fund-icon-blue.svg" class="secn-img" alt=""/>Fund Transfer
                   </a>
@@ -86,210 +126,574 @@
                     <a class="dropdown-item" href="#"><span>LT</span>List Transactions</a>
                   </div>
                 </li> -->
-            </ul>
-          </div>
-        </nav>
-      </div>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
 
-      <span class="poweredby">
-        <img src="images/yap.svg" alt="yap" class="img-fluid" />
-        <span class="nav-txt">Powered by YAP</span>
-      </span>
-    </div>
-    <div class="contenet-sec">
-      <!-- for profile -->
-      <div class="profile-sec">
-        <!-- <div class="toggle-nav"></div> -->
-        <!-- main sort for agent and list -->
-        <section class="srch-pick w-full">
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="corp-select">
-                <div class="agent-drop">
-                  <label>Agent</label>
-                  <select class="selectpicker" data-live-search="true">
-                    <option>Select Corporate</option>
-                    <option>Yapsite</option>
-                    <option>Axis bank</option>
-                    <option>HDFC Bank</option>
-                  </select>
+            <span class="poweredby">
+                <img src="images/yap.svg" alt="yap" class="img-fluid" />
+                <span class="nav-txt">Powered by YAP</span>
+            </span>
+        </div>
+        <div class="contenet-sec">
+            <!-- for profile -->
+            <div class="profile-sec">
+                <!-- <div class="toggle-nav"></div> -->
+                <!-- main sort for agent and list -->
+                <section class="srch-pick w-full">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="corp-select">
+                                <div class="agent-drop">
+                                    <label>Agent</label>
+                                    <select class="selectpicker" data-live-search="true" title="Select Corporate">
+                                        <option>Yapsite</option>
+                                        <option>Axis bank</option>
+                                        <option>HDFC Bank</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="corp-select">
+                                <div class="agent-drop">
+                                    <label>List</label>
+                                    <select class="selectpicker" data-live-search="true" title="Select Customer">
+                                        <option>Yapsite</option>
+                                        <option>Axis bank</option>
+                                        <option>HDFC Bank</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="profile-dept">
+
+                    <span class="profile-img">
+                        <img src="images/user.jpg" class="img-fluid" alt="user" />
+                    </span>
+                    <p class="profile-username">karthick, baasha</p>
+                    <div class="profile-dlt-sec">
+                        <div class="profile-drop">
+                            <span class="profile-img">
+                                <img src="images/user.jpg" class="img-fluid" alt="user" />
+                            </span>
+                            <div class="user-dlts">
+                                <p class="profile-username">karthick, baasha</p>
+                                <p>9876543210</p>
+                                <p>candysweet99@gmail.com</p>
+                            </div>
+
+                            <ul class="my-acc-profile">
+                                <li><a href="profile.html">My Account</a></li>
+                                <li><a href="">Log Out</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="corp-select">
-                <div class="agent-drop">
-                  <label>List</label>
-                  <select class="selectpicker" data-live-search="true">
-                    <option>Select Customer</option>
-                    <option>Yapsite</option>
-                    <option>Axis bank</option>
-                    <option>HDFC Bank</option>
-                  </select>
-                </div>
-              </div>
             </div>
-          </div>
-        </section>
-        <div class="profile-dept">
-
-          <span class="profile-img">
-            <img src="images/user.jpg" class="img-fluid" alt="user" />
-          </span>
-          <p class="profile-username">karthick, baasha</p>
-          <div class="profile-dlt-sec">
-            <div class="profile-drop">
-              <span class="profile-img">
-                <img src="images/user.jpg" class="img-fluid" alt="user" />
-              </span>
-              <div class="user-dlts">
-                <p class="profile-username">karthick, baasha</p>
-                <p>9876543210</p>
-                <p>candysweet99@gmail.com</p>
-              </div>
-
-              <ul class="my-acc-profile">
-                <li><a href="profile.html">My Account</a></li>
-                <li><a href="">Log Out</a></li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </div>
+
+        <div class="contenet-sec dash-overview">
+
+            <div class="content-overview">
+                <h1>Overview</h1>
+                <div class="row">
+                    <div class="col-xl-3 col-sm-4 mb-30">
+                        <div class="ove-info">
+                            <span class="ove-img"><img src="images/dashboard/avail-balance.svg" alt=""
+                                    class="img-fluid" /></span>
+                            <div class="ove-txt">
+                                <span class="ove-txt-tlt">Available Balance (₹)</span>
+                                <span class="ove-txt-cont">₹ 3456.34</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-4 mb-30">
+                        <div class="ove-info">
+                            <span class="ove-img"><img src="images/dashboard/value-trans.svg" alt=""
+                                    class="img-fluid" /></span>
+                            <div class="ove-txt">
+                                <span class="ove-txt-tlt">Value of Transactions</span>
+                                <span class="ove-txt-cont">305</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-4 mb-30">
+                        <div class="ove-info">
+                            <span class="ove-img"><img src="images/dashboard/count-trans.svg" alt=""
+                                    class="img-fluid" /></span>
+                            <div class="ove-txt">
+                                <span class="ove-txt-tlt">Count of Transactions</span>
+                                <span class="ove-txt-cont">1054</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-4 mb-30">
+                        <div class="ove-info">
+                            <span class="ove-img"><img src="images/dashboard/no-of-tolls.svg" alt=""
+                                    class="img-fluid" /></span>
+                            <div class="ove-txt">
+                                <span class="ove-txt-tlt">No of Tolls Crossed</span>
+                                <span class="ove-txt-cont">323</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-4 mb-30">
+                        <div class="ove-info">
+                            <span class="ove-img"><img src="images/dashboard/thrushold.svg" alt=""
+                                    class="img-fluid" /></span>
+                            <div class="ove-txt">
+                                <span class="ove-txt-tlt">Thershold Limit</span>
+                                <span class="ove-txt-cont">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-4 mb-30">
+                        <div class="ove-info">
+                            <span class="ove-img"><img src="images/dashboard/no-of-tags.svg" alt=""
+                                    class="img-fluid" /></span>
+                            <div class="ove-txt">
+                                <span class="ove-txt-tlt">No of tags</span>
+                                <span class="ove-txt-cont">308</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-overview">
+                <h1>Insights</h1>
+                <div class="insign-graph">
+                    <div class="row">
+                        <div class="col-xl-6 col-sm-6 mb-30">
+                            <div class="graph-cintainer">
+                                <div class="graph-sec">
+                                    <div class="graph-tlt">
+                                        <div class="tlt-cus-drop">
+                                            <span class="tlt-drop">
+                                                <select class="selectpicker filt-action">
+                                                    <option>Active Corporate Vehicles</option>
+                                                    <option>Active Retail Vehicles</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="tbl-slct-tag scnd-action">
+                                        <select class="selectpicker tbl-slct-scnd custom-dropdown" title="select date">
+                                            <option>Today</option>
+                                            <option>Last one Week</option>
+                                            <option>Last one Month</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="graph-cont-sec align-items-center graph-contain-move ">
+                                    <canvas id="myChart" height="100px"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-sm-6 mb-30">
+                            <div class="graph-cintainer">
+                                <div class="graph-sec">
+                                    <div class="graph-tlt">
+                                        <h2>Corporate Vehicles Data</h2>
+                                    </div>
+
+                                </div>
+                                <div class="graph-cont-sec">
+                                    <div class="low-balance prgress-sec">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 30%"></div>
+                                        </div>
+                                        <span class="progrss-cnt">458</span>
+                                        <span class="progrss-dlt">Low Balance of Vehicles</span>
+                                    </div>
+
+                                    <div class="black-list prgress-sec">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 50%"></div>
+                                        </div>
+                                        <span class="progrss-cnt">458</span>
+                                        <span class="progrss-dlt">Blacklist of Vehicles</span>
+                                    </div>
+
+                                    <div class="replaced-progress prgress-sec">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 40%"></div>
+                                        </div>
+                                        <span class="progrss-cnt">458</span>
+                                        <span class="progrss-dlt">Replaced of Vehicles</span>
+                                    </div>
+
+                                    <div class="pending-reg-progress prgress-sec">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 70%"></div>
+                                        </div>
+                                        <span class="progrss-cnt">458</span>
+                                        <span class="progrss-dlt">Pending Registration of Vehicles</span>
+                                    </div>
+
+                                    <div class="arroved-reg-progress prgress-sec">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 40%"></div>
+                                        </div>
+                                        <span class="progrss-cnt">458</span>
+                                        <span class="progrss-dlt">Approved Registration of Vehicles</span>
+                                    </div>
+
+                                    <div class="decline-reg-progress prgress-sec">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 60%"></div>
+                                        </div>
+                                        <span class="progrss-cnt">458</span>
+                                        <span class="progrss-dlt">Declined Registration of Vechicles</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-6 col-sm-6 mb-30">
+                            <div class="graph-cintainer">
+                                <div class="graph-sec">
+                                    <div class="graph-tlt">
+                                        <h2>Corporate Vehicles Customers</h2>
+                                    </div>
+
+                                </div>
+                                <div class="graph-cont-sec">
+                                    <div class="low-balance prgress-sec">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 30%"></div>
+                                        </div>
+                                        <span class="progrss-cnt">458</span>
+                                        <span class="progrss-dlt">Low Balance of Vehicles</span>
+                                    </div>
+
+                                    <div class="black-list prgress-sec">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 50%"></div>
+                                        </div>
+                                        <span class="progrss-cnt">458</span>
+                                        <span class="progrss-dlt">Blacklist of Vehicles</span>
+                                    </div>
+
+                                    <div class="replaced-progress prgress-sec">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 40%"></div>
+                                        </div>
+                                        <span class="progrss-cnt">458</span>
+                                        <span class="progrss-dlt">Replaced of Vehicles</span>
+                                    </div>
+
+                                    <div class="pending-reg-progress prgress-sec">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 70%"></div>
+                                        </div>
+                                        <span class="progrss-cnt">458</span>
+                                        <span class="progrss-dlt">Pending Registration of Vehicles</span>
+                                    </div>
+
+                                    <div class="arroved-reg-progress prgress-sec">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 40%"></div>
+                                        </div>
+                                        <span class="progrss-cnt">458</span>
+                                        <span class="progrss-dlt">Approved Registration of Vehicles</span>
+                                    </div>
+
+                                    <div class="decline-reg-progress prgress-sec">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 60%"></div>
+                                        </div>
+                                        <span class="progrss-cnt">458</span>
+                                        <span class="progrss-dlt">Declined Registration of Vechicles</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-6 col-sm-6 mb-30">
+                            <div class="graph-cintainer">
+                                <div class="graph-sec">
+                                    <div class="graph-tlt">
+                                        <div class="tlt-cus-drop">
+                                            <span class="tlt-drop">
+                                                <select class="selectpicker filt-action">
+                                                    <option>Active Corporate Vehicles</option>
+                                                    <option>Active Retail Vehicles</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="tbl-slct-tag scnd-action">
+                                        <select class="selectpicker tbl-slct-scnd custom-dropdown" title="select date">
+                                            <option>Today</option>
+                                            <option>Last one Week</option>
+                                            <option>Last one Month</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="graph-cont-sec align-items-center graph-contain-move">
+                                    <canvas id="myChart2" height="100px"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-overview">
+                <div class="dash-transaction">
+                    <div class="dash-cont-tlt">
+                        <h1>Transaction History</h1>
+                        <div class="tbl-slct-tag scnd-action custom-date">
+                            <select class="selectpicker tbl-slct-scnd custom-dropdown" title="Custom date">
+                                <option>Today</option>
+                                <option>Last one Week</option>
+                                <option>Last one Month</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="tlt-btn-sec">
+                        <a href="">
+                            <div class="cancel-butn mr-0">Export as Excel</div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <section class="w-full content-table">
+                    <div class="row">
+                        <div class="table-title-sec">
+
+
+                            <div class="col-xl-8">
+                                <div class="tlt-cus-drop">
+                                    <p class="frm-tlt">Transaction Details (1080)</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 d-flex justify-content-end align-items-center">
+                                <div class="tbl-left-sec">
+                                    <div class="tlt-search-sec">
+                                        <div class="search-bx">
+                                            <input type="text" placeholder="search customer" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- table starts here -->
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <section class="table-sec w-full table-responsive table-responsive-xl">
+
+                                <div class="empty-trans-section">
+                                    <div class="emty-trans-bx">
+                                        <img src="images/empty-trans.svg" alt="" class="img-fluid" />
+                                        <p>Select search critera and Date range to view your transaction history</p>
+                                    </div>
+                                </div>
+
+                                <table class="table table-hover table-transaction-history">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">Date & Time</th>
+                                            <th scope="col">Type</th>
+                                            <th scope="col">Truck No</th>
+                                            <th scope="col">Amount</th>
+                                            <th scope="col">Balance</th>
+                                            <th scope="col">TransactioN Type</th>
+                                            <th scope="col">Toll plaza</th>
+                                            <th scope="col">Serial NO</th>
+                                            <th scope="col">Profile Id</th>
+                                            <th scope="col">Tag ID</th>
+                                            <th scope="col">RRN</th>
+                                            <th scope="col">Transaction REf</th>
+                                            <th scope="col">External ID</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row">2020-02-11 13:12:16</td>
+                                            <td scope="row">CREDIT</td>
+                                            <td scope="row">ADITYA</td>
+                                            <td scope="row">10.00</td>
+                                            <td scope="row">68.49</td>
+                                            <td scope="row">VIRTUAL_ACCOUNT_CREDIT</td>
+                                            <td scope="row">ADITYA NARAIMHAN</td>
+                                            <td scope="row">1111111-111-11111122</td>
+                                            <td scope="row">WALLET</td>
+                                            <td scope="row">100010040219</td>
+                                            <td scope="row">N/A</td>
+                                            <td scope="row">028410372947</td>
+                                            <td scope="row">ADITYA</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td scope="row">2020-02-11 13:12:16</td>
+                                            <td scope="row">CREDIT</td>
+                                            <td scope="row">ADITYA</td>
+                                            <td scope="row">10.00</td>
+                                            <td scope="row">68.49</td>
+                                            <td scope="row">VIRTUAL_ACCOUNT_CREDIT</td>
+                                            <td scope="row">ADITYA NARAIMHAN</td>
+                                            <td scope="row">1111111-111-11111122</td>
+                                            <td scope="row">WALLET</td>
+                                            <td scope="row">100010040219</td>
+                                            <td scope="row">N/A</td>
+                                            <td scope="row">028410372947</td>
+                                            <td scope="row">ADITYA</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td scope="row">2020-02-11 13:12:16</td>
+                                            <td scope="row">CREDIT</td>
+                                            <td scope="row">ADITYA</td>
+                                            <td scope="row">10.00</td>
+                                            <td scope="row">68.49</td>
+                                            <td scope="row">VIRTUAL_ACCOUNT_CREDIT</td>
+                                            <td scope="row">ADITYA NARAIMHAN</td>
+                                            <td scope="row">1111111-111-11111122</td>
+                                            <td scope="row">WALLET</td>
+                                            <td scope="row">100010040219</td>
+                                            <td scope="row">N/A</td>
+                                            <td scope="row">028410372947</td>
+                                            <td scope="row">ADITYA</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td scope="row">2020-02-11 13:12:16</td>
+                                            <td scope="row">CREDIT</td>
+                                            <td scope="row">ADITYA</td>
+                                            <td scope="row">10.00</td>
+                                            <td scope="row">68.49</td>
+                                            <td scope="row">VIRTUAL_ACCOUNT_CREDIT</td>
+                                            <td scope="row">ADITYA NARAIMHAN</td>
+                                            <td scope="row">1111111-111-11111122</td>
+                                            <td scope="row">WALLET</td>
+                                            <td scope="row">100010040219</td>
+                                            <td scope="row">N/A</td>
+                                            <td scope="row">028410372947</td>
+                                            <td scope="row">ADITYA</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td scope="row">2020-02-11 13:12:16</td>
+                                            <td scope="row">CREDIT</td>
+                                            <td scope="row">ADITYA</td>
+                                            <td scope="row">10.00</td>
+                                            <td scope="row">68.49</td>
+                                            <td scope="row">VIRTUAL_ACCOUNT_CREDIT</td>
+                                            <td scope="row">ADITYA NARAIMHAN</td>
+                                            <td scope="row">1111111-111-11111122</td>
+                                            <td scope="row">WALLET</td>
+                                            <td scope="row">100010040219</td>
+                                            <td scope="row">N/A</td>
+                                            <td scope="row">028410372947</td>
+                                            <td scope="row">ADITYA</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td scope="row">2020-02-11 13:12:16</td>
+                                            <td scope="row">CREDIT</td>
+                                            <td scope="row">ADITYA</td>
+                                            <td scope="row">10.00</td>
+                                            <td scope="row">68.49</td>
+                                            <td scope="row">VIRTUAL_ACCOUNT_CREDIT</td>
+                                            <td scope="row">ADITYA NARAIMHAN</td>
+                                            <td scope="row">1111111-111-11111122</td>
+                                            <td scope="row">WALLET</td>
+                                            <td scope="row">100010040219</td>
+                                            <td scope="row">N/A</td>
+                                            <td scope="row">028410372947</td>
+                                            <td scope="row">ADITYA</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td scope="row">2020-02-11 13:12:16</td>
+                                            <td scope="row">CREDIT</td>
+                                            <td scope="row">ADITYA</td>
+                                            <td scope="row">10.00</td>
+                                            <td scope="row">68.49</td>
+                                            <td scope="row">VIRTUAL_ACCOUNT_CREDIT</td>
+                                            <td scope="row">ADITYA NARAIMHAN</td>
+                                            <td scope="row">1111111-111-11111122</td>
+                                            <td scope="row">WALLET</td>
+                                            <td scope="row">100010040219</td>
+                                            <td scope="row">N/A</td>
+                                            <td scope="row">028410372947</td>
+                                            <td scope="row">ADITYA</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td scope="row">2020-02-11 13:12:16</td>
+                                            <td scope="row">CREDIT</td>
+                                            <td scope="row">ADITYA</td>
+                                            <td scope="row">10.00</td>
+                                            <td scope="row">68.49</td>
+                                            <td scope="row">VIRTUAL_ACCOUNT_CREDIT</td>
+                                            <td scope="row">ADITYA NARAIMHAN</td>
+                                            <td scope="row">1111111-111-11111122</td>
+                                            <td scope="row">WALLET</td>
+                                            <td scope="row">100010040219</td>
+                                            <td scope="row">N/A</td>
+                                            <td scope="row">028410372947</td>
+                                            <td scope="row">ADITYA</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td scope="row">2020-02-11 13:12:16</td>
+                                            <td scope="row">CREDIT</td>
+                                            <td scope="row">ADITYA</td>
+                                            <td scope="row">10.00</td>
+                                            <td scope="row">68.49</td>
+                                            <td scope="row">VIRTUAL_ACCOUNT_CREDIT</td>
+                                            <td scope="row">ADITYA NARAIMHAN</td>
+                                            <td scope="row">1111111-111-11111122</td>
+                                            <td scope="row">WALLET</td>
+                                            <td scope="row">100010040219</td>
+                                            <td scope="row">N/A</td>
+                                            <td scope="row">028410372947</td>
+                                            <td scope="row">ADITYA</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="tot-sec cnt trans-tbl-cnt">
+                            <div class="col-xl-6">
+                                <span class="tot-pg-count">Total pages (36)</span>
+                            </div>
+                            <div class="col-xl-6"></div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+
+        </div>
+
+
     </div>
 
-    <div class="contenet-sec content-inn-sec">
-      <!-- title secction -->
-      <section class="w-full title-sec">
-        <div class="row">
-          <div class="col-xl-6">
-            <h1>View Customers</h1>
-          </div>
-          <div class="col-xl-6">
-            <div class="tlt-btn-sec">
-              <a href="">
-                <div class="cancel-butn">Export as Excel</div>
-              </a>
-              <a href="add-customer.html">
-                <div class="success-butn">Add Customer</div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- content table section -->
-      <section class="w-full content-table">
-        <div class="row">
-          <div class="table-title-sec">
-
-
-            <div class="col-xl-6">
-              <div class="tlt-cus-drop">
-
-                <span class="tlt-drop">
-                  <select class="selectpicker filt-action">
-                    <option>Pending Vehicles (360)</option>
-                    <option>Approved Vehicles (360)</option>
-                    <option>Declined Vehicles (360)</option>
-                  </select>
-                </span>
-              </div>
-            </div>
-            <div class="col-xl-6 d-flex justify-content-end align-items-center">
-              <div class="tbl-left-sec">
-                <!-- <div class="tbl-slct-tag">
-                  <select class="selectpicker tag-action custom-dropdown">
-                    <option>Fast Tag 1</option>
-                    <option>Fast Tag 2</option>
-                    <option>Fast Tag 3</option>
-                  </select>
-                </div> -->
-                <div class="tlt-search-sec">
-                  <div class="search-bx">
-                    <input type="text" placeholder="search customer" />
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-        <!-- table starts here -->
-        <div class="row">
-          <div class="col-xl-12">
-            <section class="table-sec w-full table-responsive">
-              <table class="table table-hover">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col">Date & Time</th>
-                    <th scope="col">Customer ID</th>
-                    <th scope="col">Full Name</th>
-                    <th scope="col">Contact No</th>
-                    <th scope="col">Kit No</th>
-                    <th scope="col">Tag Status</th>
-                    <th scope="col">Reason</th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td scope="row">2020-02-11 13:12:16</td>
-                    <td scope="row">10099000</td>
-                    <td scope="row">ERP Transport</td>
-                    <td scope="row">+919820885757</td>
-                    <td scope="row">6100270100000459</td>
-                    <td scope="row">NETC-Low Balance</td>
-                    <td scope="row">prrofmismatch</td>
-                    <td scope="row">
-                      <a href="view-customer.html"><span class="view-btn"></span></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td scope="row">2020-02-11 13:12:16</td>
-                    <td scope="row">10099000</td>
-                    <td scope="row">ERP Transport</td>
-                    <td scope="row">+919820885757</td>
-                    <td scope="row">6100270100000459</td>
-                    <td scope="row">NETC-Low Balance</td>
-                    <td scope="row">prrofmismatch</td>
-                    <td scope="row">
-                      <a href="edit-customer.html"><span class="edit-btn"></span></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td scope="row">2020-02-11 13:12:16</td>
-                    <td scope="row">10099000</td>
-                    <td scope="row">ERP Transport</td>
-                    <td scope="row">+919820885757</td>
-                    <td scope="row">6100270100000459</td>
-                    <td scope="row">NETC-Low Balance</td>
-                    <td scope="row">prrofmismatch</td>
-                    <td scope="row">
-                      <a href="view-customer.html"><span class="view-btn"></span></a>
-                    </td>
-                  </tr>
-
-
-                </tbody>
-              </table>
-            </section>
-          </div>
-        </div>
-        <div class="row">
-          <div class="tot-sec cnt">
-            <div class="col-xl-6">
-              <span class="tot-pg-count">Total pages (36)</span>
-            </div>
-            <div class="col-xl-6"></div>
-          </div>
-
-        </div>
-      </section>
-    </div>
-  </div>
-
-  <!--less js file-->
-  <script src="//cdn.jsdelivr.net/npm/less"></script>
-  <script src="js/main.js" type="text/javascript"></script>
+    <!--less js file-->
+    <script src="//cdn.jsdelivr.net/npm/less"></script>
+    <script src="https://www.chartjs.org/dist/2.9.4/Chart.min.js"></script>
+    <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <script type="text/javascript" src="js/loader.js"></script>
+    <script type="text/javascript" src="chartjs.js"></script>
+    <script src="js/charter.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
 </body>
 
 </html>
