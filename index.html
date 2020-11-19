@@ -101,10 +101,34 @@
                                         class="nav-txt">Transaction History</span></a>
                             </li>
 
-                            <li class="nav-item">
+                            <li class="nav-item flex-column align-items-start">
+                                <a class="nav-link collapsed" data-toggle="collapse" href="#fund-corporate"
+                                    role="button" aria-expanded="false" aria-controls="fund-corporate"
+                                    id="nav-drop-items">
+                                    <img src="images/icons/fund-icon.svg" alt="" />
+                                    <img src="images/icons/fund-icon-blue.svg" class="secn-img" alt="" />
+                                    <span class="nav-txt">Fund Transfer</span>
+
+                                </a>
+                                <ul class="collapse dropdownList" id="fund-corporate">
+                                    <li class="nav-item">
+                                        <a class="nav-link dropdown-item"
+                                            href="javascript:void(0);"><span>FD</span><span class="nav-txt">Fund
+                                                Corporate</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link dropdown-item"
+                                            href="javascript:void(0);"><span>LT</span><span class="nav-txt">List
+                                                Transactions</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- <li class="nav-item">
                                 <a class="nav-link collapsed text-truncate" id="nav-drop-items" href="#submenu1"
                                     data-toggle="collapse" data-target="#submenu1">
-                                    <img src="images/icons/fund-icon.svg" alt="" /><img
+                                    <img src="images/icons/fund-icon.svg" alt="" />
+                                    <img
                                         src="images/icons/fund-icon-blue.svg" class="secn-img" alt="" /><span
                                         class="nav-txt">Fund Transfer</span></a>
                                 <div class="collapse" id="submenu1" aria-expanded="false">
@@ -115,7 +139,7 @@
                                             Transactions</span>
                                     </a>
                                 </div>
-                            </li>
+                            </li> -->
 
                             <!-- <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#droplayers" id="navbarDropdown" role="button" data-toggle="collapse" aria-expanded="false">
@@ -279,7 +303,8 @@
                                         </div>
                                     </div>
                                     <div class="tbl-slct-tag scnd-action">
-                                        <select class="selectpicker tbl-slct-scnd custom-dropdown" title="select date">
+                                        <select class="selectpicker tbl-slct-scnd dash-cus-time custom-dropdown"
+                                            title="Select time period">
                                             <option>Today</option>
                                             <option>Last one Week</option>
                                             <option>Last one Month</option>
@@ -427,7 +452,8 @@
                                         </div>
                                     </div>
                                     <div class="tbl-slct-tag scnd-action">
-                                        <select class="selectpicker tbl-slct-scnd custom-dropdown" title="select date">
+                                        <select class="selectpicker tbl-slct-scnd dash-cus-time custom-dropdown"
+                                            title="Select time period">
                                             <option>Today</option>
                                             <option>Last one Week</option>
                                             <option>Last one Month</option>
@@ -690,9 +716,9 @@
     <script src="//cdn.jsdelivr.net/npm/less"></script>
     <script src="https://www.chartjs.org/dist/2.9.4/Chart.min.js"></script>
     <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
-    <script type="text/javascript" src="js/loader.js"></script>
-    <script type="text/javascript" src="chartjs.js"></script>
-    <script src="js/charter.js"></script>
+    <!-- <script type="text/javascript" src="js/loader.js"></script> -->
+    <script type="text/javascript" src="js/chartjs.js"></script>
+    <!-- <script src="js/charter.js"></script> -->
     <script src="js/main.js" type="text/javascript"></script>
 </body>
 

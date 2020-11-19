@@ -19,6 +19,8 @@
     <!-- font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
         rel="stylesheet" />
+
+
 </head>
 
 <body>
@@ -43,7 +45,7 @@
                                         class="nav-txt">Dashboard</span>
                                     <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a class="nav-link" href="customer.html">
                                     <img src="images/icons/cus-icon.svg" alt="" /><img
                                         src="images/icons/cus-icon-blue.svg" class="secn-img" alt="" /><span
@@ -56,7 +58,6 @@
                                     <img src="images/icons/veh-icon.svg" alt="" /><img
                                         src="images/icons/veh-icon-blue.svg" class="secn-img" alt="" /><span
                                         class="nav-txt">Vechicle Registration</span></a>
-                                <a href="add-vehicle.html" class="add-detail-btn"></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
@@ -87,6 +88,15 @@
                                 </div>
                             </li>
 
+                            <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#droplayers" id="navbarDropdown" role="button" data-toggle="collapse" aria-expanded="false">
+                    <img src="images/icons/fund-icon.svg" alt=""/><img src="images/icons/fund-icon-blue.svg" class="secn-img" alt=""/>Fund Transfer
+                  </a>
+                  <div class="dropdown-menu" id="droplayers" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#"><span>FD</span>Fund Corporate</a>
+                    <a class="dropdown-item" href="#"><span>LT</span>List Transactions</a>
+                  </div>
+                </li> -->
                         </ul>
                     </div>
                 </nav>
@@ -151,7 +161,6 @@
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -160,175 +169,80 @@
             <!-- title secction -->
             <section class="w-full title-sec">
                 <div class="row">
-                    <div class="col-xl-12">
-                        <h1 class="trans-tlt">Profile</h1>
+                    <div class="col-xl-6">
+                        <h1>Customer Load</h1>
                     </div>
-
+                    <div class="col-xl-6">
+                        <!-- <div class="tlt-btn-sec">
+                            <a href="javascript:void(0)">
+                                <div class="cancel-butn vehl-mapper">Download Vehicle Mapper</div>
+                            </a>
+                        </div> -->
+                    </div>
                 </div>
             </section>
             <!-- content table section -->
             <section class="w-full content-table">
+                <div class="row">
+                    <div class="table-title-sec">
 
-                <div class="profile-info">
-                    <div class="row">
-                        <div class="table-title-sec">
-                            <div class="col-xl-12">
-                                <div class="tlt-cus-drop">
-                                    <p class="frm-tlt">Personal Information</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
+
                         <div class="col-xl-12">
-                            <div class="profile-inn">
-                                <div class="profile-name">
-                                    <div class="profile-pic">k</div>
-                                    <div class="profile-dlt">
-                                        <p class="profile-name">karthick baasha</p>
-                                        <p class="profile-email">baasha_bhai@gmail.com</p>
-                                    </div>
-                                </div>
-
-                                <div class="profile-details">
-                                    <div class="row">
-                                        <div class="col-xl-8 profile-seperation">
-                                            <div class="row">
-                                                <div class="col-xl-6 mb-40">
-                                                    <label>First Name</label>
-                                                    <p>Karthick</p>
-                                                </div>
-                                                <div class="col-xl-6 mb-40">
-                                                    <label>Last Name</label>
-                                                    <p>Baasha</p>
-                                                </div>
-                                                <div class="col-xl-6 mb-40">
-                                                    <label>Email ID</label>
-                                                    <p>baasha_bhai@gmail.com</p>
-                                                </div>
-                                                <div class="col-xl-6 mb-40">
-                                                    <label>Mobile No</label>
-                                                    <p>9698412345</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-4"></div>
-                                    </div>
-                                </div>
+                            <div class="tlt-cus-drop">
+                                <p class="frm-tlt">Search Customer</p>
+                                <p class="avail-balance">Avail. balance ₹ <span>10, 987.00</span></p>
 
                             </div>
-
                         </div>
+
+                    </div>
+
+                </div>
+                <!-- table starts here -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <section class="w-full reg-form radio-form">
+                            <form>
+                                <div
+                                    class="form-group col-xl-6 col-xs-12 col-sm-6 mb-0 d-flex justify-content-between no-pd">
+                                    <div class="radio-bx">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                            value="option1" checked>
+                                        <label class="form-check-label" for="gridRadios1">
+                                            Account No
+                                        </label>
+                                    </div>
+                                    <div class="radio-inp">
+                                        <div class="form-group col-xl-12 col-xs-12 col-sm-12 mb-30 float-left no-pd">
+                                            <input type="text" class="form-control" id="exampleInputPassword1"
+                                                value="YAPTAGYES" disabled>
+                                        </div>
+                                        <div class="form-group col-xl-12 col-xs-12 col-sm-12 no-pd">
+                                            <input type="text" class="form-control" id="exampleInputPassword1"
+                                                placeholder="Customer ID">
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group col-xl-6 col-xs-12 col-sm-6 mb-0 no-pd">
+                                    <div class="tot-sec">
+                                        <div class="col-xl-12 col-sm-12 float-right d-flex justify-content-end no-pd">
+                                            <button type="submit" class="cncl-butn">Cancel</button>
+                                            <button type="submit" class="submit-butn">Fetch CUSTOMER</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </section>
                     </div>
                 </div>
-                <div class="profile-info security-info-sec">
-                    <div class="row">
-                        <div class="table-title-sec">
-                            <div class="col-xl-12">
-                                <div class="tlt-cus-drop">
-                                    <p class="frm-tlt">Security Information</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="profile-inn">
-                                <div class="profile-details mt-0">
-                                    <div class="row">
-                                        <div class="col-xl-8 profile-seperation">
-                                            <div class="row">
-                                                <div class="col-xl-6 mb-0">
-                                                    <label>Email ID</label>
-                                                    <p>baasha_bhai@gmail.com</p>
-                                                </div>
-                                                <div class="col-xl-6 mb-0">
-                                                    <span class="password-sec">
-                                                        <label>Your password</label>
-                                                        <p>..............</p>
-                                                        <span class="change-password">Change</span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <!-- <div class="row">
-                                                <div class="change-password-show">
-                                                    <div class="form-group col-xl-6 col-xs-12 col-sm-6">
-                                                        <label for="exampleInputPassword1">Enter New paswword</label>
-                                                        <input type="text" class="form-control"
-                                                            id="exampleInputPassword1" placeholder="">
-                                                    </div>
-                                                    <div class="form-group col-xl-6 col-xs-12 col-sm-6">
-                                                        <label for="exampleInputPassword1">Confirm Password</label>
-                                                        <input type="text" class="form-control"
-                                                            id="exampleInputPassword1" placeholder="">
-
-                                                        <div class="tot-sec">
-                                                            <div
-                                                                class="col-xl-12 col-sm-12 float-right d-flex justify-content-end no-pd">
-                                                                <button type="submit"
-                                                                    class="cncl-butn cncl-password">Cancel</button>
-                                                                <button type="submit" class="submit-butn">Save</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
-                                                </div>
-
-                                            </div> -->
-                                        </div>
-                                        <div class="col-xl-4"></div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-
 
             </section>
-        </div>
-    </div>
-
-    <!-- popups -->
-    <div class="overlay">
-        <div class="popup">
-            <div class="popup-change-password pop-cont">
-                <div class="pop-title">Change password</div>
-                <div class="pop-conten">
-                    <table class="table table-borderless">
-                        <tbody>
-                            <tr>
-                                <th>Old Password</th>
-                                <td>
-                                    <div class="form-group col-xl-12 col-xs-12 col-sm-12">
-                                        <input type="password" class="form-control" id="exampleInputPassword1"
-                                            placeholder="">
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>New Password</th>
-                                <td>
-                                    <div class="form-group col-xl-12 col-xs-12 col-sm-12">
-
-                                        <input type="password" class="form-control" id="exampleInputPassword1"
-                                            placeholder="">
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="pop-confirm">
-                    <button type="submit" class="cncl-butn-pop">Cancel</button>
-                    <button type="submit" class="submit-butn-pop">Change</button>
-                </div>
-            </div>
-
         </div>
     </div>
 

@@ -32,6 +32,8 @@
     display: flex;
     align-items: center;
     position: relative;
+    position: relative;
+    top: 10px;
     &:after {
       content: "";
       background: url("../images/drop.svg") no-repeat center;
@@ -1481,7 +1483,7 @@ form .form-control:placeholder {
     flex-direction: row;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
-    padding: 12px;
+    padding: 15px 15px 20px 15px;
     align-items: flex-start;
 
     .ove-img {
@@ -1666,4 +1668,79 @@ form .form-control:placeholder {
     margin-bottom: 0 !important;
     width: auto;
   }
+}
+
+.avail-balance {
+  float: left;
+  font-family: @font-ibm;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: @heading-color;
+  margin-bottom: 0;
+  margin-left: 180px;
+
+  span {
+    font-family: @font-ilisar_regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: @txt-color;
+  }
+}
+
+.radio-form {
+  float: left;
+  padding: 40px 30px;
+  width: 100%;
+  height: 550px;
+  input {
+    width: auto;
+    float: left;
+    height: auto;
+  }
+  label {
+    width: auto;
+    float: left;
+    height: auto;
+    color: @heading-color;
+    font-family: @font-ibm;
+    font-weight: 500;
+    position: relative;
+    top: 1px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .radio-bx {
+    float: left;
+    position: relative;
+    left: 20px;
+  }
+  .radio-inp {
+    float: left;
+    width: 50%;
+    input {
+      width: 100%;
+      height: 32px;
+    }
+  }
+  .tot-sec {
+    padding: 0 0;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid @table-border-color;
+    .submit-butn {
+      width: auto;
+      padding: 0 30px;
+    }
+  }
+}
+
+.dash-cus-time {
+  width: 160px !important;
 }

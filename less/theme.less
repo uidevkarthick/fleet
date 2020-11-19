@@ -202,6 +202,10 @@ h1 {
         display: block !important;
       }
     }
+
+    .dropdownList {
+      padding: 0;
+    }
   }
 
   .dropdown-item:focus,
@@ -239,14 +243,18 @@ h1 {
     }
   }
 
-  .dropclass {
-    background: #ffffffeb;
-    border-radius: 16px;
+  .drop-list-nav {
+    background: @white-color;
+    border-radius: 19.3438px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 
     a.nav-link {
-      color: #0035c1;
-      background: #ffffffe3;
+      color: @theme-color;
+      background: @white-color;
       border-radius: 19.3438px;
+      width: 100%;
 
       img {
         display: none;
@@ -257,7 +265,52 @@ h1 {
     }
 
     a.dropdown-item {
-      color: #0035c1;
+      color: @theme-color;
+      background: none;
+    }
+    #submenu1 {
+      float: left;
+      width: 100%;
+    }
+    ul {
+      padding: 0px 0px;
+      li {
+        margin-bottom: 0;
+      }
+    }
+
+    .dropdownList {
+      overflow: hidden;
+      li {
+        padding: 0 6px;
+        &:hover {
+          border-radius: 0;
+          background: @table-hover-color;
+          a {
+            border-radius: 0;
+            background: none;
+          }
+        }
+      }
+    }
+  }
+
+  .dropdownList {
+    overflow: hidden;
+    li {
+      padding: 0 6px;
+      &:hover {
+        border-radius: 0;
+        background: @table-hover-color;
+        a {
+          border-radius: 0;
+          background: none;
+        }
+      }
+
+      a {
+        color: @theme-color;
+      }
     }
   }
 
@@ -667,7 +720,7 @@ ul.navbar-nav {
   }
 
   .map-veh-popup {
-    width: 501px;
+    width: 50%;
 
     .popup-map-veh {
       display: none;
@@ -693,9 +746,9 @@ ul.navbar-nav {
 
     .owl-dots {
       counter-reset: slides-num;
-      right: 48%;
+      right: 49%;
       position: absolute;
-      bottom: 2%;
+      bottom: 1%;
       width: 20px;
 
       color: @theme-color;

@@ -5,7 +5,7 @@ var myChart = new Chart(ctx, {
         labels: ["Total Vehicles", "No of Active Vehicles", "No of Inactive Vehicles"],
         datasets: [{
             backgroundColor: [
-                '#c01', '#FFC61E', '#66AA33'
+                '#FFC61E', '#66AA33', '#F1EEA2'
             ],
             data: [12, 19, 3]
         }]
