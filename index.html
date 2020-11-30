@@ -67,7 +67,7 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav flex-column">
                             <li class="nav-item active">
-                                <a class="nav-link" href="dashboard.html">
+                                <a class="nav-link" href="index.html">
                                     <img src="images/icons/dash-icon.svg" alt="" /><img
                                         src="images/icons/dash-icon-blue.svg" class="secn-img" alt="" /><span
                                         class="nav-txt">Dashboard</span>
@@ -101,7 +101,7 @@
                                         class="nav-txt">Transaction History</span></a>
                             </li>
 
-                            <li class="nav-item flex-column align-items-start">
+                            <li class="nav-item flex-column align-items-start drop-navs">
                                 <a class="nav-link collapsed" data-toggle="collapse" href="#fund-corporate"
                                     role="button" aria-expanded="false" aria-controls="fund-corporate"
                                     id="nav-drop-items">
@@ -113,43 +113,16 @@
                                 <ul class="collapse dropdownList" id="fund-corporate">
                                     <li class="nav-item">
                                         <a class="nav-link dropdown-item"
-                                            href="javascript:void(0);"><span>FD</span><span class="nav-txt">Fund
+                                            href="fund-corporate.html"><span>FD</span><span class="nav-txt">Fund
                                                 Corporate</span></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link dropdown-item"
-                                            href="javascript:void(0);"><span>LT</span><span class="nav-txt">List
+                                            href="list-transaction.html"><span>LT</span><span class="nav-txt">List
                                                 Transactions</a>
                                     </li>
                                 </ul>
                             </li>
-
-                            <!-- <li class="nav-item">
-                                <a class="nav-link collapsed text-truncate" id="nav-drop-items" href="#submenu1"
-                                    data-toggle="collapse" data-target="#submenu1">
-                                    <img src="images/icons/fund-icon.svg" alt="" />
-                                    <img
-                                        src="images/icons/fund-icon-blue.svg" class="secn-img" alt="" /><span
-                                        class="nav-txt">Fund Transfer</span></a>
-                                <div class="collapse" id="submenu1" aria-expanded="false">
-                                    <a class="dropdown-item" href="#"><span>FD</span><span class="nav-txt">Fund
-                                            Corporate</span></a>
-                                    <a class="dropdown-item" href="#submenu1sub1"><span>LT</span><span
-                                            class="nav-txt">List
-                                            Transactions</span>
-                                    </a>
-                                </div>
-                            </li> -->
-
-                            <!-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#droplayers" id="navbarDropdown" role="button" data-toggle="collapse" aria-expanded="false">
-                    <img src="images/icons/fund-icon.svg" alt=""/><img src="images/icons/fund-icon-blue.svg" class="secn-img" alt=""/>Fund Transfer
-                  </a>
-                  <div class="dropdown-menu" id="droplayers" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#"><span>FD</span>Fund Corporate</a>
-                    <a class="dropdown-item" href="#"><span>LT</span>List Transactions</a>
-                  </div>
-                </li> -->
                         </ul>
                     </div>
                 </nav>
@@ -210,8 +183,39 @@
 
                             <ul class="my-acc-profile">
                                 <li><a href="profile.html">My Account</a></li>
-                                <li><a href="">Log Out</a></li>
+                                <li><a href="login.html">Log Out</a></li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenet-sec dash-accinfo">
+            <h1>Account Info</h1>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="acc-info-bx">
+                        <div class="acc-info-txtbx">
+                            <div class="ove-txt">
+                                <span class="ove-txt-tlt">Acc/No <span class="cpy"><img src="images/copy-icon.svg"
+                                            alt="" /></span></span>
+                                <span class="ove-txt-cont">YAPTAGYESFLEET_2</span>
+                            </div>
+                        </div>
+                        <div class="acc-info-txtbx">
+                            <div class="ove-txt">
+                                <span class="ove-txt-tlt">IFSC <span class="cpy"><img src="images/copy-icon.svg"
+                                            alt="" /></span></span>
+                                <span class="ove-txt-cont">YESBOCMSNOCE</span>
+                            </div>
+                        </div>
+                        <div class="acc-info-txtbx">
+                            <div class="ove-txt">
+                                <span class="ove-txt-tlt">UPI ID <span class="cpy"><img src="images/copy-icon.svg"
+                                            alt="" /></span></span>
+                                <span class="ove-txt-cont">YAPTAGYESFLEET_2@YESBANKLTD</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -258,7 +262,9 @@
                             <span class="ove-img"><img src="images/dashboard/no-of-tolls.svg" alt=""
                                     class="img-fluid" /></span>
                             <div class="ove-txt">
-                                <span class="ove-txt-tlt">No of Tolls Crossed</span>
+                                <span class="ove-txt-tlt">No of Tolls Crossed <span class="tooltip"
+                                        data-toggle="tooltip" data-placement="top" title="Summation of All
+debits (Netc_debit)"><img src="images/tooltip.svg" alt="tooltip" /></span></span>
                                 <span class="ove-txt-cont">323</span>
                             </div>
                         </div>

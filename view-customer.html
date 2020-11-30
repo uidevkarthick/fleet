@@ -58,6 +58,7 @@
                                     <img src="images/icons/veh-icon.svg" alt="" /><img
                                         src="images/icons/veh-icon-blue.svg" class="secn-img" alt="" /><span
                                         class="nav-txt">Vechicle Registration</span></a>
+                                <a href="add-vehicle.html" class="add-detail-btn"></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
@@ -72,31 +73,30 @@
                                         class="nav-txt">Transaction History</span></a>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link collapsed text-truncate" id="nav-drop-items" href="#submenu1"
-                                    data-toggle="collapse" data-target="#submenu1">
-                                    <img src="images/icons/fund-icon.svg" alt="" /><img
-                                        src="images/icons/fund-icon-blue.svg" class="secn-img" alt="" /><span
-                                        class="nav-txt">Fund Transfer</span></a>
-                                <div class="collapse" id="submenu1" aria-expanded="false">
-                                    <a class="dropdown-item" href="#"><span>FD</span><span class="nav-txt">Fund
-                                            Corporate</span></a>
-                                    <a class="dropdown-item" href="#submenu1sub1"><span>LT</span><span
-                                            class="nav-txt">List
-                                            Transactions</span>
-                                    </a>
-                                </div>
+                            <li class="nav-item flex-column align-items-start drop-navs">
+                                <a class="nav-link collapsed" data-toggle="collapse" href="#fund-corporate"
+                                    role="button" aria-expanded="false" aria-controls="fund-corporate"
+                                    id="nav-drop-items">
+                                    <img src="images/icons/fund-icon.svg" alt="" />
+                                    <img src="images/icons/fund-icon-blue.svg" class="secn-img" alt="" />
+                                    <span class="nav-txt">Fund Transfer</span>
+
+                                </a>
+                                <ul class="collapse dropdownList" id="fund-corporate">
+                                    <li class="nav-item">
+                                        <a class="nav-link dropdown-item"
+                                            href="fund-corporate.html"><span>FD</span><span class="nav-txt">Fund
+                                                Corporate</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link dropdown-item"
+                                            href="list-transaction.html"><span>LT</span><span class="nav-txt">List
+                                                Transactions</a>
+                                    </li>
+                                </ul>
                             </li>
 
-                            <!-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#droplayers" id="navbarDropdown" role="button" data-toggle="collapse" aria-expanded="false">
-                    <img src="images/icons/fund-icon.svg" alt=""/><img src="images/icons/fund-icon-blue.svg" class="secn-img" alt=""/>Fund Transfer
-                  </a>
-                  <div class="dropdown-menu" id="droplayers" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#"><span>FD</span>Fund Corporate</a>
-                    <a class="dropdown-item" href="#"><span>LT</span>List Transactions</a>
-                  </div>
-                </li> -->
+
                         </ul>
                     </div>
                 </nav>
@@ -157,7 +157,7 @@
 
                             <ul class="my-acc-profile">
                                 <li><a href="profile.html">My Account</a></li>
-                                <li><a href="">Log Out</a></li>
+                                <li><a href="login.html">Log Out</a></li>
                             </ul>
                         </div>
                     </div>

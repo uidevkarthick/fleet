@@ -1,15 +1,21 @@
 // load content profile
 $(document).ready(function () {
+  $('[data-toggle="tooltip"]').tooltip()
   //profile pic dropdown
   $(".profile-username").click(function () {
     $(".profile-dlt-sec").toggle();
   });
 
+  $('.drop-navs').on('click', function () {
+    $("#nav-drop-items").parent().toggleClass("active");
+  });
 
-  $(document).on("click", "#nav-drop-items", function (e) {
 
-    $("#nav-drop-items").parent().toggleClass("drop-list-nav");
-  })
+
+  // $(document).on("click", "#nav-drop-items", function (e) {
+
+  //   $("#nav-drop-items").parent().toggleClass("drop-list-nav");
+  // })
   // sidenav - dropdown
   // $(document).on("click", "#nav-drop-items", function () {
   //   $(this).addClass("drop-list-nav");
@@ -65,6 +71,13 @@ $(document).ready(function () {
     $(".pop-cont").hide();
     $(".popup-block").show();
   });
+  // edit transaction popup
+
+  $(".edit-trans-queue").click(function () {
+    $(".overlay").show();
+    $(".pop-cont").hide();
+    $(".popup-edit-transq").show();
+  })
 
   $('.add-blklist').click(function () {
     $(".overlay").show();
@@ -138,6 +151,40 @@ $(document).ready(function () {
   }
 
 
+  // drop-down menu
+
+  // $(".drop-navs").click(function () {
+  //   $(this).toggleClass("drop-arrow")
+  // })
+
+  // forget password
+  $(".forget-pass").click(function () {
+    $(".log-login").hide();
+    $(".login-form").hide();
+    $(".log-forget").show();
+    $(".forget-form").show();
+  });
+  $(".btn-otp-start").click(function () {
+    $(".otp-bx,.btn-otp-verify").show();
+    $(this).hide();
+  });
+  $(".btn-otp-verify").click(function () {
+    $(".forget-form").hide();
+    $(".login-form").hide();
+    $(".change-password-form").show();
+  });
+
+  $(".return-login").click(function () {
+    $(".log-login").show();
+    $(".login-form").show();
+    $(".log-forget").hide();
+    $(".forget-form").hide();
+    $(".change-password-form").hide();
+  });
+  $(".btn-signin").click(function () {
+    window.location.href = "index.html";
+  })
+
 
 });
 
@@ -157,10 +204,10 @@ $(document).ready(function () {
   // create new variable for each menu
   var dd1 = new DropDown($("#noble-gases"));
   // var dd2 = new DropDown($('#other-gases'));
-  $(document).click(function () {
-    // close menu on document click
-    $(".wrap-drop").removeClass("active");
-  });
+  // $(document).click(function () {
+  //   // close menu on document click
+  //   $(".wrap-drop").removeClass("active");
+  // });
 
   $(".drop li").click(function () {
     $(".drop li").removeClass("drop-active");

@@ -1158,6 +1158,7 @@ form .form-control:placeholder {
 .srch-criti {
   float: left;
   margin-left: 50px;
+  position: relative;
 
   .tbl-slct-tag {
     width: 220px;
@@ -1518,7 +1519,9 @@ form .form-control:placeholder {
     }
   }
 }
-
+.ove-txt-tlt {
+  position: relative;
+}
 .insign-graph {
   float: left;
   width: 100%;
@@ -1670,30 +1673,6 @@ form .form-control:placeholder {
   }
 }
 
-.avail-balance {
-  float: left;
-  font-family: @font-ibm;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: right;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: @heading-color;
-  margin-bottom: 0;
-  margin-left: 180px;
-
-  span {
-    font-family: @font-ilisar_regular;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    color: @txt-color;
-  }
-}
-
 .radio-form {
   float: left;
   padding: 40px 30px;
@@ -1704,18 +1683,6 @@ form .form-control:placeholder {
     float: left;
     height: auto;
   }
-  label {
-    width: auto;
-    float: left;
-    height: auto;
-    color: @heading-color;
-    font-family: @font-ibm;
-    font-weight: 500;
-    position: relative;
-    top: 1px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
   .radio-bx {
     float: left;
     position: relative;
@@ -1723,7 +1690,7 @@ form .form-control:placeholder {
   }
   .radio-inp {
     float: left;
-    width: 50%;
+    width: 100%;
     input {
       width: 100%;
       height: 32px;
@@ -1731,9 +1698,9 @@ form .form-control:placeholder {
   }
   .tot-sec {
     padding: 0 0;
-    margin-top: 30px;
-    padding-top: 24px;
-    border-top: 1px solid @table-border-color;
+    margin-top: 20px;
+    padding-top: 0px;
+
     .submit-butn {
       width: auto;
       padding: 0 30px;
@@ -1745,6 +1712,303 @@ form .form-control:placeholder {
   width: 160px !important;
 }
 
-#nav-drop-items {
+// #nav-drop-items {
+//   width: 100%;
+// }
+
+.nav-item a {
+  width: 100%;
+}
+
+.dropdownList {
+  padding: 0;
+  width: 100%;
+  li {
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    a {
+      padding: 0;
+      span {
+        width: 24px;
+        height: 24px;
+        margin-right: 20px;
+        padding-left: 2px;
+      }
+
+      span:nth-child(2) {
+        position: relative;
+        left: -4px;
+      }
+    }
+  }
+}
+
+.fund-dlts {
+  float: left;
+  margin-left: 100px;
+
+  p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    &:nth-child(2) {
+      margin-bottom: 0;
+    }
+    span:first-child {
+      font-family: @font-ilisar_light;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      color: @txt-color;
+      opacity: 0.5;
+      width: 120px;
+    }
+
+    span {
+      font-family: @font-ibm;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      color: @theme-color;
+    }
+  }
+}
+
+.login-bg {
+  float: left;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+.login-sec {
+  float: left;
+  width: 100%;
+  padding: 0 14%;
+  .logo-sec {
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .login-frm-sec {
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+    span.wel {
+      display: block;
+      font-family: @font-ilisar_light;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      color: @txt-color;
+      opacity: 0.4;
+      margin-bottom: 10px;
+    }
+    p.log-tlt {
+      font-family: @font-ilisar_regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 25px;
+      color: @txt-color;
+      margin-bottom: 50px;
+      float: left;
+    }
+    .log-login {
+      width: 100%;
+    }
+    .login-frm {
+      display: block;
+
+      label {
+        font-family: @font-ilisar_light;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 160%;
+        text-transform: capitalize;
+        color: @theme-color;
+      }
+      input {
+        border-radius: 4px;
+        height: 48px;
+        font-family: @font-ilisar_regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: @txt-color;
+        outline: none !important;
+        box-shadow: none !important;
+      }
+
+      input::-webkit-input-placeholder {
+        opacity: 0.6;
+      }
+      .rmem {
+        font-weight: 300;
+        font-size: 14px;
+      }
+      .forget-pass {
+        a {
+          text-decoration: underline;
+          color: @txt-color;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 17px;
+          font-family: @font-ilisar_light;
+        }
+      }
+      .btn-login {
+        width: 125px;
+        height: 48px;
+        font-family: @font-ilisar_regular;
+      }
+      .hlp {
+        a {
+          text-decoration: underline;
+          color: #1489fd;
+          font-size: 14px;
+          line-height: 17px;
+          font-family: @font-ilisar_regular;
+        }
+      }
+    }
+  }
+}
+
+.log-foo {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  padding: 0 14%;
+  .hlp {
+    a {
+      text-decoration: underline;
+      color: #1489fd;
+      font-size: 11px;
+      line-height: 13px;
+      font-family: @font-ilisar_regular;
+    }
+  }
+  .pwr-logo {
+    float: right;
+    font-family: @font-ilisar_light;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: @txt-color;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: "";
+      background: url("../images/yap-foo.svg") no-repeat center;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+
+.log-forget {
+  float: left;
+  width: 100%;
   display: none;
+  margin-bottom: 40px;
+  p {
+    margin-bottom: 0 !important;
+    a {
+      text-decoration: underline;
+    }
+  }
+  .hlp {
+    float: right;
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.forget-form {
+  display: none;
+}
+.otp-bx,
+.btn-otp-verify,
+.change-password-form {
+  display: none;
+}
+
+.dash-accinfo {
+  background: #271f560d;
+
+  h1 {
+    font-family: @font-ilisar_regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: @theme-color;
+  }
+  .acc-info-bx {
+    float: left;
+    width: 100%;
+    background: #fff;
+    padding: 22px;
+    border-radius: 6px;
+  }
+  .acc-info-txtbx {
+    float: left;
+    padding-right: 70px;
+    padding-left: 70px;
+    border-right: 1px solid @table-border-color;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      border-right: none;
+    }
+    .ove-txt {
+      display: flex;
+      flex-direction: column;
+      .ove-txt-tlt {
+        font-family: @font-ilisar_light;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: @placeholder-color;
+        margin-bottom: 10px;
+      }
+      .ove-txt-cont {
+        font-family: @font-ilisar_regular;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 1px;
+        color: #271f56;
+      }
+      .cpy {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.tooltip {
+  position: absolute;
+  right: -20px;
+  top: 0;
 }
