@@ -6,8 +6,21 @@ $(document).ready(function () {
     $(".profile-dlt-sec").toggle();
   });
 
+  // logo nav
+  $(".logo").click(function () {
+    window.location.href = "index.html";
+  })
+
   $('.drop-navs').on('click', function () {
     $("#nav-drop-items").parent().toggleClass("active");
+  });
+
+  $(".amt-added").click(function () {
+    $('.toaster').stop().fadeIn(400).delay(2000).fadeOut(500);
+  });
+
+  $(".profile-pic").hover(function () {
+    $(this).toggleClass("upload-pic");
   });
 
 

@@ -303,36 +303,31 @@
     <!-- popups -->
     <div class="overlay">
         <div class="popup">
+
             <div class="popup-change-password pop-cont">
                 <div class="pop-title">Change password</div>
                 <div class="pop-conten">
-                    <table class="table table-borderless">
-                        <tbody>
-                            <tr>
-                                <th>Old Password</th>
-                                <td>
-                                    <div class="form-group col-xl-12 col-xs-12 col-sm-12">
-                                        <input type="password" class="form-control" id="exampleInputPassword1"
-                                            placeholder="">
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>New Password</th>
-                                <td>
-                                    <div class="form-group col-xl-12 col-xs-12 col-sm-12">
+                    <form>
+                        <div class="row">
+                            <div class="form-group col-xl-12 col-xs-12 col-sm-12">
+                                <label for="exampleInputEmail1">Old Password</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Enter old password">
 
-                                        <input type="password" class="form-control" id="exampleInputPassword1"
-                                            placeholder="">
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            </div>
+                            <div class="form-group col-xl-12 col-xs-12 col-sm-12">
+                                <label for="exampleInputEmail1">New Password</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Enter new password">
+
+                            </div>
+
+                        </div>
+                    </form>
                 </div>
                 <div class="pop-confirm">
                     <button type="submit" class="cncl-butn-pop">Cancel</button>
-                    <button type="submit" class="submit-butn-pop">Change</button>
+                    <button type="submit" class="submit-butn-pop">Replace</button>
                 </div>
             </div>
 

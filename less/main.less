@@ -5,6 +5,7 @@
   width: 100%;
   margin-top: 1.6741071428571428vw;
   padding-left: 20px;
+  cursor: pointer;
 
   img {
     width: auto;
@@ -439,7 +440,7 @@
 }
 
 .tag-action {
-  width: 120px !important;
+  width: 160px !important;
   height: 32px;
   button {
     border-width: 0 1px 0 0;
@@ -625,6 +626,7 @@ form .form-control:placeholder {
     align-items: center;
     border-radius: 6px;
     color: @placeholder-color;
+    cursor: pointer;
 
     &:before {
       content: "";
@@ -742,6 +744,7 @@ form .form-control:placeholder {
 .view-form {
   float: left;
   .form-group {
+    margin-bottom: 1.6rem;
     label {
       font-family: @font-ilisar_light;
       font-style: normal;
@@ -1423,6 +1426,9 @@ form .form-control:placeholder {
   }
 }
 .popup-change-password {
+  .pop-conten {
+    padding: 15px 20px;
+  }
   th {
     position: relative;
     top: 8px;
@@ -1784,6 +1790,8 @@ form .form-control:placeholder {
 
   img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 .login-sec {
@@ -1976,9 +1984,6 @@ form .form-control:placeholder {
     &:first-child {
       padding-left: 0;
     }
-    &:last-child {
-      border-right: none;
-    }
     .ove-txt {
       display: flex;
       flex-direction: column;
@@ -2011,4 +2016,36 @@ form .form-control:placeholder {
   position: absolute;
   right: -20px;
   top: 0;
+}
+
+.toaster {
+  position: absolute;
+  right: 20px;
+  padding: 10px 20px;
+  width: 250px;
+  top: 39px;
+  background: #30b560;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: @font-ilisar_regular;
+  display: none;
+}
+.upload-pic {
+  float: left;
+  width: 100%;
+  background: rgba(21, 21, 21, 0.8);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:after {
+    content: "";
+    background: url("../images/icon-upload.svg") no-repeat center;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    position: absolute;
+  }
 }
