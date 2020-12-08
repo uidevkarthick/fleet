@@ -144,6 +144,10 @@ h1 {
   transition: 0.2s all ease;
   z-index: 1;
 
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+
   .navbar-nav {
     li {
       margin-bottom: 12px;
@@ -533,6 +537,10 @@ h1 {
   padding: 30px;
   transition: 0.2s all ease;
   position: relative;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    padding: 15px;
+  }
 }
 .content-inn-sec {
   background: @content_bg_color;

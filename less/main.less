@@ -35,6 +35,11 @@
     position: relative;
     position: relative;
     top: 10px;
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+
     &:after {
       content: "";
       background: url("../images/drop.svg") no-repeat center;
@@ -69,16 +74,29 @@
   float: left;
   width: 70%;
   margin-top: 0px;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+
   .corp-select {
     float: left;
     display: flex;
     flex-direction: column;
     position: relative;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
     .agent-drop {
       width: 250px;
       float: left;
       position: relative;
       margin-right: 32px;
+
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
 
       button,
       .bootstrap-select {
@@ -707,6 +725,13 @@ form .form-control:placeholder {
 
 .scnd-action {
   margin-right: 20px;
+  @media screen and (max-width: 600px) {
+    margin-right: 0;
+    width: 100%;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 15px;
+  }
 }
 .veh-tag {
   float: right;
@@ -1558,6 +1583,9 @@ form .form-control:placeholder {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
 
     .tlt-cus-drop {
       padding: 10px 0 10px 0px;
@@ -1986,6 +2014,18 @@ form .form-control:placeholder {
     padding-right: 70px;
     padding-left: 70px;
     border-right: 1px solid @table-border-color;
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+      margin-bottom: 20px;
+      border-right: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
     &:first-child {
       padding-left: 0;
     }
