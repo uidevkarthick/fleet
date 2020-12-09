@@ -23,6 +23,92 @@
 
 <body>
     <div class="container-fluid no-pd">
+
+        <div class="navpabel-responsive">
+            <div class="row">
+                <div class="col-6">
+                    <img src="images/logo.svg" class="img-fluid logo-act" alt="fleet" />
+                </div>
+                <div class="col-6">
+                    <span class="mobile-togle-nav"></span>
+                    <div class="nav-section mob-nav-section">
+                        <span class="nav-tog-close"></span>
+                        <nav class="navbar navbar-expand-lg">
+                            <div class="collapse show" id="navbarNav">
+                                <ul class="navbar-nav flex-column">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="index.html">
+                                            <img src="images/icons/dash-icon.svg" alt="" />
+                                            <img src="images/icons/dash-icon-blue.svg" class="secn-img" alt="" />
+                                            <span class="nav-txt">Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="customer.html">
+                                            <img src="images/icons/cus-icon.svg" alt="" /><img
+                                                src="images/icons/cus-icon-blue.svg" class="secn-img" alt="" /><span
+                                                class="nav-txt">Customer</span>
+                                        </a>
+                                        <a href="add-customer.html" class="add-detail-btn"></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="vehicle.html">
+                                            <img src="images/icons/veh-icon.svg" alt="" /><img
+                                                src="images/icons/veh-icon-blue.svg" class="secn-img" alt="" /><span
+                                                class="nav-txt">Vechicle Registration</span></a>
+                                        <a href="add-vehicle.html" class="add-detail-btn"></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <img src="images/icons/reports-icon.svg" alt="" /><img
+                                                src="images/icons/reports-icon-blue.svg" class="secn-img" alt="" /><span
+                                                class="nav-txt">Reports</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="transaction-history.html">
+                                            <img src="images/icons/trans-icon.svg" alt="" /><img
+                                                src="images/icons/trans-icon-blue.svg" class="secn-img" alt="" /><span
+                                                class="nav-txt">Transaction History</span></a>
+                                    </li>
+
+                                    <li class="nav-item flex-column align-items-start drop-navs">
+                                        <a class="nav-link collapsed" data-toggle="collapse" href="#fund-corporate"
+                                            role="button" aria-expanded="false" aria-controls="fund-corporate"
+                                            id="nav-drop-items">
+                                            <img src="images/icons/fund-icon.svg" alt="" />
+                                            <img src="images/icons/fund-icon-blue.svg" class="secn-img" alt="" />
+                                            <span class="nav-txt">Fund Transfer</span>
+
+                                        </a>
+                                        <ul class="collapse dropdownList" id="fund-corporate">
+                                            <li class="nav-item">
+                                                <a class="nav-link dropdown-item"
+                                                    href="fund-corporate.html"><span>FD</span><span class="nav-txt">Fund
+                                                        Corporate</span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link dropdown-item"
+                                                    href="list-transaction.html"><span>LT</span><span
+                                                        class="nav-txt">List
+                                                        Transactions</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="profile.html">
+                                            <img src="images/icons/profile.svg" alt="" />
+                                            <span class="nav-txt">Profile</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
         <div class="navpanel">
             <div class="logo">
                 <img src="images/logo.svg" class="img-fluid logo-act" alt="fleet" />
@@ -102,7 +188,7 @@
                 <span class="nav-txt">Powered by YAP</span>
             </span>
         </div>
-        <div class="contenet-sec">
+        <div class="contenet-sec mob-agent-sec">
             <!-- for profile -->
             <div class="profile-sec">
                 <!-- <div class="toggle-nav"></div> -->
@@ -163,12 +249,30 @@
             <!-- title secction -->
             <section class="w-full title-sec">
                 <div class="row">
-                    <div class="col-xl-12 d-flex align-items-center">
-                        <h1>Customer Fund Load</h1>
+                    <div class="col-xl-12">
+                        <h1 style="float: left;">Customer Fund Load</h1>
 
                         <div class="fund-dlts">
                             <p><span>Acc/No</span><span>YAPTAGYES</span></p>
                             <p><span>Avail.Balance</span><span>₹ 10,987.00</span></p>
+                        </div>
+
+                        <div class="tbl-left-sec srch-criti mob-srch-criti">
+                            <div class="tbl-slct-tag">
+                                <select class="selectpicker tag-action custom-dropdown">
+                                    <option>Vehicle No/customer ID</option>
+                                    <option>Corporate ID</option>
+                                    <option>Agent ID</option>
+                                    <option>Fastag/Kit Number</option>
+                                    <option>Retail Truck</option>
+                                </select>
+                            </div>
+                            <div class="tlt-search-sec">
+                                <div class="search-bx criti-val-bx">
+                                    <input type="text" placeholder="Enter your customer ID" />
+                                </div>
+                            </div>
+                            <span class="date-go-btn"></span>
                         </div>
                     </div>
                     <div class="col-xl-6">
@@ -188,7 +292,7 @@
                             <div class="tlt-cus-drop">
                                 <p class="frm-tlt">Search Customer</p>
 
-                                <div class="tbl-left-sec srch-criti">
+                                <div class="tbl-left-sec srch-criti mob-hide">
                                     <div class="tbl-slct-tag">
                                         <select class="selectpicker tag-action custom-dropdown">
                                             <option>Vehicle No/customer ID</option>
@@ -226,22 +330,22 @@
                                 <div
                                     class="form-group col-xl-6 col-xs-12 col-sm-6 mb-0 d-flex justify-content-between no-pd">
                                     <div class="radio-inp row">
-                                        <div class="form-group col-xl-6 col-xs-12 col-sm-6 mb-30">
+                                        <div class="form-group col-xl-6 col-12 col-sm-6 mb-30">
                                             <label for="exampleInputPassword1">Customer ID / Entity ID</label>
                                             <input type="text" class="form-control" id="exampleInputPassword1"
                                                 placeholder="Enter Owner Name" value="ADITYA" disabled>
                                         </div>
-                                        <div class="form-group col-xl-6 col-xs-12 col-sm-6">
+                                        <div class="form-group col-xl-6 col-12 col-sm-6">
                                             <label for="exampleInputPassword1">Available Balance of Aditya</label>
                                             <input type="text" class="form-control" id="exampleInputPassword1"
                                                 placeholder="Enter Owner Name" value="₹ 5,400.00" disabled>
                                         </div>
-                                        <div class="form-group col-xl-6 col-xs-12 col-sm-6">
+                                        <div class="form-group col-xl-6 col-12 col-sm-6">
                                             <label for="exampleInputPassword1">Load Amount</label>
                                             <input type="text" class="form-control" id="exampleInputPassword1"
                                                 placeholder="Enter the Load amount">
                                         </div>
-                                        <div class="form-group col-xl-6 col-xs-12 col-sm-6">
+                                        <div class="form-group col-xl-6 col-12 col-sm-6">
                                             <label for="exampleInputPassword1">Description</label>
                                             <input type="text" class="form-control" id="exampleInputPassword1"
                                                 placeholder="Enter Description">
@@ -249,9 +353,9 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group col-xl-6 col-xs-12 col-sm-6 mb-0 ">
+                                <div class="form-group col-xl-6 col-12 col-sm-6 mb-0 ">
                                     <div class="tot-sec">
-                                        <div class="col-xl-12 col-sm-12 float-right d-flex justify-content-end">
+                                        <div class="col-xl-12 col-sm-12 add-amt-btn">
                                             <button type="submit" class="cncl-butn">Cancel</button>
                                             <button type="submit" class="submit-butn amt-added">
                                                 ADD AMOUNT

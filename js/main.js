@@ -11,6 +11,14 @@ $(document).ready(function () {
     window.location.href = "index.html";
   })
 
+  // mobile toggle nav
+  $(".mobile-togle-nav").click(function () {
+    $(".mob-nav-section").show();
+  });
+  $(".nav-tog-close").click(function () {
+    $(".mob-nav-section").hide();
+  });
+
   $('.drop-navs').on('click', function () {
     $("#nav-drop-items").parent().toggleClass("active");
   });

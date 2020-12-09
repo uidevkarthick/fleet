@@ -152,6 +152,9 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
 .table-title-sec {
@@ -170,6 +173,11 @@
   align-items: center;
   padding: 12px 30px;
   display: flex;
+  position: relative;
+  @media screen and (max-width: 600px) {
+    padding: 12px 15px;
+    margin-right: 0;
+  }
 
   label {
     font-style: normal;
@@ -222,6 +230,10 @@
   background: @body-color;
   border-radius: 6px;
   overflow: hidden;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }
 .tbl-left-sec {
   display: flex;
@@ -229,6 +241,26 @@
   margin-right: 20px;
   border: 1px solid #e8e8e8;
   border-radius: 6px;
+  @media screen and (max-width: 600px) {
+    margin: 0;
+    justify-content: space-between;
+
+    .tbl-slct-tag {
+      margin-bottom: 0 !important;
+    }
+
+    .tlt-search-sec {
+      display: block;
+      float: left;
+      width: 100%;
+      .search-bx {
+        width: 100%;
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 .table-sec {
   height: auto;
@@ -298,7 +330,7 @@
 
     &:before {
       content: "";
-      background: url("../images/drop-up.png") no-repeat center;
+
       width: 18px;
       height: 15px;
       display: inline-block;
@@ -388,6 +420,10 @@
   line-height: 17px;
   transition: 0.2s all ease;
   white-space: nowrap;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 
   img {
     margin-right: 15px;
@@ -553,6 +589,10 @@
   float: left;
   padding: 20px 30px;
 
+  @media screen and (max-width: 600px) {
+    padding: 20px 20px;
+  }
+
   label {
     font-family: @font-ilisar_regular;
     font-style: normal;
@@ -580,6 +620,10 @@
     width: 90%;
     border-color: @table-border-color !important;
     // border-color: @table-border-color !important;
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
 
   .frm-slct {
@@ -592,6 +636,11 @@
     display: flex;
     align-items: center;
     height: 32px;
+
+    @media screen and (max-width: 600px) {
+      width: 100% !important;
+      left: 0;
+    }
 
     button {
       height: 100%;
@@ -633,6 +682,10 @@ form .form-control:placeholder {
     color: @theme-color;
     border-bottom: 1px solid @table-border-color;
     padding: 24px 15px;
+
+    @media screen and (max-width: 600px) {
+      margin-bottom: 20px;
+    }
   }
 
   .file-up {
@@ -645,6 +698,10 @@ form .form-control:placeholder {
     border-radius: 6px;
     color: @placeholder-color;
     cursor: pointer;
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
 
     &:before {
       content: "";
@@ -723,6 +780,16 @@ form .form-control:placeholder {
   }
 }
 
+.tbl-slct-tag {
+  @media screen and (max-width: 600px) {
+    margin: 0 !important;
+    margin-bottom: 15px !important;
+    .tbl-slct-scnd {
+      width: 100% !important;
+    }
+  }
+}
+
 .scnd-action {
   margin-right: 20px;
   @media screen and (max-width: 600px) {
@@ -745,6 +812,9 @@ form .form-control:placeholder {
     position: absolute;
     right: 10%;
     cursor: pointer;
+    @media screen and (max-width: 600px) {
+      right: 0;
+    }
   }
 }
 
@@ -833,6 +903,10 @@ form .form-control:placeholder {
   padding: 24px 15px;
   margin-bottom: 30px;
 
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+
   h2 {
     border: none !important;
     padding: 0 !important;
@@ -852,6 +926,16 @@ form .form-control:placeholder {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      float: left;
+      text-align: left;
+      justify-content: flex-start;
+      margin-top: 15px;
+      position: relative;
+      left: -10px;
+    }
 
     &:before {
       content: "";
@@ -882,6 +966,9 @@ form .form-control:placeholder {
   border: 1px solid #e8e8e8 !important;
   height: 32px;
   border-radius: 6px;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 .drop-active {
@@ -1180,6 +1267,10 @@ form .form-control:placeholder {
     font-size: 14px;
     line-height: 17px;
     color: #292449;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      float: left;
+    }
   }
 }
 
@@ -1188,11 +1279,30 @@ form .form-control:placeholder {
   margin-left: 50px;
   position: relative;
 
+  @media screen and (max-width: 600px) {
+    margin-left: 0;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 12px;
+
+    .tag-action {
+      border: none;
+    }
+  }
+
   .tbl-slct-tag {
     width: 220px;
 
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      height: 40px;
+      margin-top: 20px;
+      border-bottom: 1px solid @table-border-color;
+    }
+
     .tag-action {
       width: 100% !important;
+      height: 100%;
 
       a {
         span {
@@ -1263,6 +1373,13 @@ form .form-control:placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 600px) {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 8px;
+    right: 0;
+  }
   &::before {
     content: "";
     background: url("../images/search-arrow.svg") no-repeat center;
@@ -1277,6 +1394,9 @@ form .form-control:placeholder {
   float: left;
   width: 100%;
   padding: 33px 33px;
+  @media screen and (max-width: 600px) {
+    padding: 33px 20px;
+  }
 
   .profile-name {
     float: left;
@@ -1422,6 +1542,9 @@ form .form-control:placeholder {
 .custom-date-show {
   float: left;
   display: none;
+  @media screen and (max-width: 600px) {
+    font-size: 3.5vw;
+  }
   span {
     font-family: @font-ibm;
     font-style: normal;
@@ -1429,6 +1552,9 @@ form .form-control:placeholder {
     font-size: 14px;
     line-height: 18px;
     color: @heading-color;
+    @media screen and (max-width: 600px) {
+      font-size: 3.5vw;
+    }
   }
 
   font-family: @font-ibm;
@@ -1712,6 +1838,9 @@ form .form-control:placeholder {
   padding: 40px 30px;
   width: 100%;
   height: 550px;
+  @media screen and (max-width: 600px) {
+    padding: 20px 20px;
+  }
   input {
     width: auto;
     float: left;
@@ -1725,6 +1854,12 @@ form .form-control:placeholder {
   .radio-inp {
     float: left;
     width: 100%;
+    @media screen and (max-width: 600px) {
+      margin: 0;
+      .form-group {
+        padding: 0;
+      }
+    }
     input {
       width: 100%;
       height: 32px;
@@ -1738,6 +1873,22 @@ form .form-control:placeholder {
     .submit-butn {
       width: auto;
       padding: 0 30px;
+    }
+  }
+
+  .add-amt-btn {
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    button {
+      float: left;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    div {
+      padding: 0;
     }
   }
 }
@@ -1780,6 +1931,10 @@ form .form-control:placeholder {
 .fund-dlts {
   float: left;
   margin-left: 100px;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    margin-left: 0;
+  }
 
   p {
     display: flex;
@@ -1826,6 +1981,9 @@ form .form-control:placeholder {
   float: left;
   width: 100%;
   padding: 0 14%;
+  @media screen and (max-width: 600px) {
+    padding: 0 5%;
+  }
   .logo-sec {
     float: left;
     width: 100%;
@@ -2092,5 +2250,34 @@ form .form-control:placeholder {
     height: 24px;
     display: inline-block;
     position: absolute;
+  }
+}
+
+.export-mob {
+  display: none;
+  @media screen and (max-width: 600px) {
+    display: block;
+    background: url("../images/mob-export.svg") no-repeat center;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 12px;
+    background-size: cover;
+  }
+}
+.pge-tlt-sec {
+  @media screen and (max-width: 600px) {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 5px;
+    margin-bottom: 15px;
+  }
+  a {
+    display: none;
+    @media screen and (max-width: 600px) {
+      display: block;
+    }
   }
 }
