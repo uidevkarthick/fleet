@@ -11,6 +11,11 @@ $(document).ready(function () {
     window.location.href = "index.html";
   })
 
+  // logo index
+  $(".logo-act").click(function () {
+    window.location.href = "index.html";
+  })
+
   // mobile toggle nav
   $(".mobile-togle-nav").click(function () {
     $(".mob-nav-section").show();

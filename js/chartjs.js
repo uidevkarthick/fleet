@@ -12,8 +12,8 @@ var myChart = new Chart(ctx, {
     },
 
     options: {
-
         responsive: true,
+
         legend: {
             position: 'right',
             align: 'center',
@@ -24,23 +24,6 @@ var myChart = new Chart(ctx, {
                 padding: 15,
             },
         },
-        // layout: {
-        //     padding: {
-        //         left: 0,
-        //         right: 0,
-        //         top: 0,
-        //         bottom: 0
-        //     },
-        //     margin: {
-        //         left: 50,
-        //         right: 0,
-        //         top: 0,
-        //         bottom: 0
-        //     }
-        // }
-
-
-
     },
 
 
@@ -61,10 +44,7 @@ var myChart2 = new Chart(ctx2, {
     },
 
     options: {
-
         responsive: true,
-
-
         legend: {
             position: 'right',
             align: 'center',
@@ -93,9 +73,6 @@ var myChart2 = new Chart(ctx2, {
         //         bottom: 0
         //     }
         // }
-
-
-
     },
 
 
